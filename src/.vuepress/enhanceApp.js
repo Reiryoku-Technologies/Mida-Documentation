@@ -7,4 +7,4 @@ export default ({
     siteData,
 }) => {
     Vue.component("LogoDark", LogoDark);
-}
+};

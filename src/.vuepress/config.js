@@ -1,18 +1,11 @@
-const { description, } = require("../../package.json");
-
 module.exports = {
     title: "Mida",
-    description,
     head: [
-        ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
-        ["meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }]
+        [ "meta", { name: "apple-mobile-web-app-capable", content: "yes" }, ],
+        [ "meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }, ]
     ],
     themeConfig: {
         repo: "Reiryoku-Technologies/Mida",
-        //editLinks: true,
-        docsDir: "",
-        editLinkText: "Contribute to this content on GitHub",
-        lastUpdated: true,
         displayAllHeaders: true,
         searchPlaceholder: "Search...",
         nav: [
@@ -22,11 +15,11 @@ module.exports = {
             },
             {
                 text: "Ecosystem",
-                link: "/ecosystem/"
+                link: "/ecosystem/",
             },
             {
                 text: "Community",
-                link: "/community/"
+                link: "/community/",
             },
         ],
         sidebar: {
@@ -34,7 +27,6 @@ module.exports = {
                 {
                     title: "Introduction",
                     collapsable: false,
-                    initialOpenGroupIndex: -1,
                     children: [
                         "",
                         "introduction/installation",
@@ -43,7 +35,6 @@ module.exports = {
                 {
                     title: "Getting Started",
                     collapsable: false,
-                    initialOpenGroupIndex: 0,
                     children: [
                         "getting-started/login",
                         "getting-started/balance-equity-margin",
@@ -53,7 +44,6 @@ module.exports = {
                 {
                     title: "Trading",
                     collapsable: false,
-                    initialOpenGroupIndex: -1,
                     children: [
                         "trading/orders",
                         "trading/deals",
@@ -61,23 +51,15 @@ module.exports = {
                     ],
                 },
                 {
-                    title: "Watchers",
+                    title: "Ticks and Candlesticks",
                     collapsable: false,
-                    initialOpenGroupIndex: -1,
                     children: [
-                        "watchers/market-watcher"
-                    ],
-                },
-                {
-                    title: "Expert Advisors",
-                    collapsable: false,
-                    initialOpenGroupIndex: -1,
-                    children: [
-
+                        "ticks-candlesticks/market-watcher",
+                        "ticks-candlesticks/time-series",
                     ],
                 },
             ],
-        }
+        },
     },
     plugins: [
         "@vuepress/plugin-back-to-top",

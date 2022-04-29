@@ -1,4 +1,4 @@
-# MarketWatcher
+# Watchers
 The `MarketWatcher` API allows to listen real-time ticks and candlesticks.
 
 ## watch()
@@ -10,7 +10,7 @@ watch (symbol: string, directives: MidaMarketWatcherDirectives): Promise<void>;
 ```
 
 ## Ticks listener
-Ticks can be listened through the `watchTicks` option.
+Ticks can be listened through the `watchTicks` directive.
 
 - Example
 ```javascript

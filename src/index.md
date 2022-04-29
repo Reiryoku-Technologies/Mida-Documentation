@@ -1,6 +1,5 @@
 ---
 home: true
-tagline: The framework for algo-trading in global financial markets
 actionText: Quick Start →
 actionLink: /documentation/
 features:
@@ -10,5 +9,4 @@ features:
   details: Feature 2 Description
 - title: Broker-neutral
   details: Feature 3 Description
-footer: Made by Reiryoku Technologies
 ---

@@ -1,4 +1,5 @@
 # Balance, equity, and margin
+Balance, equity and margin can be retrieved from a `MidaBrokerAccount` instance.
 
 ## getBalance()
 Returns the account balance.

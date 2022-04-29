@@ -3,13 +3,12 @@
 Returns the symbols available for the account.
 - Interface
 ```typescript
-getSymbols(): string[];
+getSymbols (): string[];
 ```
 - Example
 ```javascript
 const symbols = await myAccount.getSymbols();
 ```
-
 
 ## getSymbol()
 Returns a `MidaSymbol` instance or `undefined` if the symbol is not found.
@@ -21,7 +20,7 @@ Returns a `MidaSymbol` instance or `undefined` if the symbol is not found.
 
 - Interface
 ```typescript
-getSymbol(symbol: string): MidaSymbol | undefined;
+getSymbol (symbol: string): MidaSymbol | undefined;
 ```
 - Example
 ```javascript

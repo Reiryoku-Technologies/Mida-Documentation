@@ -1,28 +1,28 @@
 <template>
-  <RouterLink
-    v-if="isInternal"
-    class="nav-link"
-    :to="link"
-    :exact="exact"
-    @focusout.native="focusoutAction"
-  >
-    {{ item.text }}
-  </RouterLink>
-  <a
-    v-else
-    :href="link"
-    class="nav-link external"
-    :target="target"
-    :rel="rel"
-    @focusout="focusoutAction"
-  >
-    {{ item.text }}
-    <OutboundLink v-if="isBlankTarget" />
-  </a>
+    <RouterLink
+        v-if="isInternal"
+        class="nav-link"
+        :to="link"
+        :exact="exact"
+        @focusout.native="focusoutAction"
+    >
+        {{ item.text }}
+    </RouterLink>
+    <a
+        v-else
+        :href="link"
+        class="nav-link external"
+        :target="target"
+        :rel="rel"
+        @focusout="focusoutAction"
+    >
+        {{ item.text }}
+        <OutboundLink v-if="isBlankTarget" />
+    </a>
 </template>
 
 <script>
-import { isExternal, isMailto, isTel, ensureExt } from '../util'
+import { isExternal, isMailto, isTel, ensureExt, } from "../util";
 
 export default {
   name: 'NavLink',

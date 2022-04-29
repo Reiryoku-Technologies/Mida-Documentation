@@ -1,7 +1,7 @@
 # Deals
-Deals are the result of an order execution: a deal represents the transaction
-performed to finalize an order. An order can be executed either in its 
-entirety or parts with one or severe deals.
+Deals are represented by the `MidaBrokerDeal` class.
+A deal is the result of an order execution and represents the transaction
+occurred to execute an order. An order can be executed entirely or partially with one or severe deals.
 
 ## Opening deals
 A opening deal represents the transfer of an asset into the account, opening deals
@@ -13,10 +13,7 @@ result in entirely or partially closing the volume of an open position. Closing 
 affect the account balance by applying the respective profits, commissions and swaps according
 to the closed volumes and execution prices.
 
-## Profits, commissions and swaps
-In most cases an opening deal has zero profit, an opening commission and zero swaps.
-
 ## getDeals()
-Deals can also be retrived from orders and positions
-- `order.deals`
-- `position.deals`
+Deals can be retrived from orders and positions instances.
+- `order.executedDeals`
+- `position.executedDeals`

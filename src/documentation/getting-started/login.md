@@ -1,12 +1,16 @@
 # Account login
 A broker account is required to get started with Mida.
 
-## `Mida.login()`
+## Mida.login()
 Used to login into any broker supported by Mida.
+
 - Example
 ```javascript
+import { Mida, } from "@reiryoku/mida";
+
 const myAccount = await Mida.login("cTrader", {
     clientId: "...",
     clientSecret: "...",
+    accessToken: "...",
 });
 ```

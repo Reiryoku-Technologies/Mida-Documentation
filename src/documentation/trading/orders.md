@@ -1,4 +1,5 @@
 # Orders
+Orders are represented by the `MidaBrokerOrder` class.
 
 ## placeOrder()
 Used to place an order.
@@ -9,8 +10,9 @@ placeOrder (directives: MidaBrokerOrderDirectives): Promise<MidaBrokerOrder>;
 ```
 
 ## Market orders
+Market orders are executed as soon as possible at the current market conditions.
 ```javascript
-const { MidaBrokerOrderDirection, } = require("@reiryoku/mida");
+import { MidaBrokerOrderDirection, } from "@reiryoku/mida";
 
 const myOrder = await myAccount.placeOrder({
     symbol: "BTCUSD",
@@ -20,9 +22,13 @@ const myOrder = await myAccount.placeOrder({
 ```
 
 ## Limit orders
+Limit orders are executed at different conditions depending on the order direction.
+Buy limit orders are executed when the ask price goes below the limit price,
+sell limit orders are executed when the bid price goes above the limit price.
+
 - Example
 ```javascript
-const { MidaBrokerOrderDirection, } = require("@reiryoku/mida");
+import { MidaBrokerOrderDirection, } from "@reiryoku/mida";
 
 const myOrder = await myAccount.placeOrder({
     symbol: "XAUUSD",
@@ -33,20 +39,24 @@ const myOrder = await myAccount.placeOrder({
 ```
 
 ## Stop orders
+Stop orders are executed at different conditions depending on the order direction.
+Buy stop orders are executed when the ask price goes above the stop price,
+sell stop orders are executed when the bid price goes below the stop price.
+
 - Example
 ```javascript
-const { MidaBrokerOrderDirection, } = require("@reiryoku/mida");
+import { MidaBrokerOrderDirection, } from "@reiryoku/mida";
 
 const myOrder = await myAccount.placeOrder({
-    symbol: "EURUSD",
+    symbol: "XAUUSD",
     direction: MidaBrokerOrderDirection.SELL,
     volume: 1,
-    stop: 1.3,
+    stop: 2000,
 });
 ```
 
 ## Protections
-Take profit and stop loss can be optionally set through the `protection` option.
+Take profit and stop loss can be optionally set with the `protection` option.
 
 - Example
 ```javascript
@@ -63,11 +73,8 @@ const myOrder = await myAccount.placeOrder({
 });
 ```
 
-### Trailing stop loss
-
-
 ## Resolvers
-By default the `Promise<MidaBrokerOrder>` returned by `placeOrder()` resolves when the order enters in one of the following states:
+The Promise returned by `placeOrder()` resolves when the order enters in one of the following states:
 `rejected`, `pending`, `expired` or `executed`.
 
 The `resolverEvents` option allows to change this behaviour, the option indicates a set of order events that will resolve the Promise.
