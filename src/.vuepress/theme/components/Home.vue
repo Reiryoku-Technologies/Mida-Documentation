@@ -1,24 +1,6 @@
 <template>
     <div>
         <div class="flex flex--full stream">
-            <div class="flex flex--100 flex--y-align-center stream-box">
-                <div class="flex flex--100 flex--x-align-center">
-                    <p class="description">
-                        The TypeScript framework for algotrading<br>
-                        in global financial markets
-                    </p>
-                </div>
-                <div class="flex flex--100 flex--x-align-center">
-                    <NavLink
-                        class="action-button"
-                        :item="actionLink"
-                    />
-                    <NavLink
-                        class="install-button"
-                        :item="installLink"
-                    />
-                </div>
-            </div>
             <span class="stream__text stream__text--1 stream__text--repeat-y">
                     /**
                      * sort Used to order an array of integers in ascending order (O(n)).
@@ -95,6 +77,24 @@
                         });
                     }
             </span>
+            <div class="flex flex--100 flex--y-align-center stream-box">
+                <div class="flex flex--100 flex--x-align-center">
+                    <p class="description">
+                        The TypeScript framework for algotrading<br>
+                        in global financial markets
+                    </p>
+                </div>
+                <div class="flex flex--100 flex--x-align-center">
+                    <NavLink
+                        class="action-button"
+                        :item="actionLink"
+                    />
+                    <NavLink
+                        class="install-button"
+                        :item="installLink"
+                    />
+                </div>
+            </div>
         </div>
         <main class="flex flex--100 home" :aria-labelledby="data.heroText !== null ? 'main-title' : null">
             <div v-if="data.features && data.features.length" class="flex flex--100 flex--x-align-between features">
@@ -159,6 +159,8 @@ export default {
 
 .stream-box
     height inherit
+
+    z-index 5000
 
 .description
     margin-top 0
@@ -267,6 +269,8 @@ export default {
 
     font-size 0.7rem
     white-space pre
+
+    z-index: 500;
 
 .stream__text--1
     left: 10px

@@ -1,12 +1,12 @@
 <template>
     <header class="flex flex--100 flex--y-align-center navbar">
-        <div class="flex flex--40">
-            <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
+        <div class="flex flex--40 left-box">
             <RouterLink :to="$localePath" class="home-link">
                 <LogoDark class="logo"/>
             </RouterLink>
+            <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
         </div>
-        <div class="flex flex--60 flex--x-align-end">
+        <div class="flex flex--60 flex--x-align-end right-box">
             <SearchBox v-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
             <NavLinks class="links"/>
         </div>
@@ -41,7 +41,15 @@ export default {
 .search-box
     margin-right 1.5rem !important
 
+.sidebar-button
+    position initial
+
 @media (max-width: $MQMobile)
-    .links
+    .right-box
         display none
+
+    .left-box
+        justify-content space-between
+
+        width 100%
 </style>
