@@ -11,7 +11,8 @@ The Mida core comes with no default plugins or integrations.
 Installing the plugin is necessary to use cTrader brokers.
 
 Plugins must be registered in the application main entry point.
-- Example
+
+- **Example**
 ```javascript
 import { Mida, } from "reiryoku/mida";
 

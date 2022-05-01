@@ -161,6 +161,7 @@ export default {
     height inherit
 
 .description
+    margin-top 0
     font-size 42px
     font-weight bold
     letter-spacing 1px
@@ -238,7 +239,7 @@ export default {
         margin 2rem auto 1.2rem
       h1
         font-size 2rem
-      h1, .description, .action
+      h1, .action
         margin 1.2rem auto
     .feature
       h2

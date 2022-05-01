@@ -1,10 +1,11 @@
 # Account login
-A broker account is required to get started with Mida.
+A broker account is required to get started with Mida. Until now
+Mida supports all cTrader brokers.
 
 ## Mida.login()
 Used to login into any broker supported by Mida.
 
-- Example
+- **Example**
 ```javascript
 import { Mida, } from "@reiryoku/mida";
 

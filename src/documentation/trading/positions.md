@@ -3,17 +3,19 @@ Positions are represented by the `MidaBrokerPosition` class.
 An open position represents a quantity of asset held by the account.
 
 ## Execution price
-Because a position is the result of one or more deals which can be executed at different times and different prices,
-the position execution price is the VWAP of the execution prices of the deals impacting the position.
+Because a position is the result of one or more deals which can be executed at different prices,
+the position execution price is the VWAP of the deals execution prices.
 
 ## getUnrealizedNetProfit()
 Returns the unrealized net profit of the position.
 
-- Interface
+- **Interface**
 ```typescript
-getUnrealizedProfit(): Promise<number>;
+class MidaBrokerPosition {
+    getUnrealizedProfit (): Promise<number>;
+}
 ```
-- Example
+- **Example**
 ```javascript
 const actualNetProfit = await myPosition.getUnrealizedNetProfit();
 ```
@@ -21,36 +23,45 @@ const actualNetProfit = await myPosition.getUnrealizedNetProfit();
 ## addVolume()
 Places an order to for adding volume to the position.
 
-- Interface
+- **Interface**
 ```typescript
-addVolume (quantity): Promise<MidaBrokerOrder>;
+class MidaBrokerPosition {
+    addVolume (quantity): Promise<MidaBrokerOrder>;
+}
 ```
 
 ## subtractVolume()
 Places an order to for subtracting volume to the position.
 
-- Interface
+- **Interface**
 ```typescript
-subtractVolume (quantity): Promise<MidaBrokerOrder>;
+class MidaBrokerPosition {
+    subtractVolume (quantity): Promise<MidaBrokerOrder>;
+}
 ```
 
 ## close()
 Places an order for closing the position.
 
-- Interface
+- **Interface**
 ```typescript
-close (): Promise<MidaBrokerOrder>;
+class MidaBrokerPosition {
+    close (): Promise<MidaBrokerOrder>;
+}
 ```
 
 ## Orders and deals
-`position.executedOrders` represents the orders that affected the position
-- Interface
-```typescript
-get orders (): MidaBrokerOrder[];
-```
+Orders and deals can be retrieved from positions.
 
-`position.executedDeals` represents the deals that affected the position
-- Interface
+- **Interface**
 ```typescript
-get deals (): MidaBrokerDeal[];
+class MidaBrokerPosition {
+    get executedOrders (): MidaBrokerOrder[];
+}
+```
+- **Interface**
+```typescript
+class MidaBrokerPosition {
+    get executedDeals (): MidaBrokerDeal[];
+}
 ```

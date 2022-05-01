@@ -1,20 +1,22 @@
 # Watchers
-The `MarketWatcher` API allows to listen real-time ticks and candlesticks.
+The `MidaMarketWatcher` API is available to listen real-time ticks and candlesticks.
 
 ## watch()
-Used to watch a symbol.
+Used to watch a symbol based on the specified directives.
 
-- Interface
+- **Interface**
 ```typescript
-watch (symbol: string, directives: MidaMarketWatcherDirectives): Promise<void>;
+class MidaMarketWatcher {
+    watch (symbol: string, directives: MidaMarketWatcherDirectives): Promise<void>;
+}
 ```
 
 ## Ticks listener
 Ticks can be listened through the `watchTicks` directive.
 
-- Example
+- **Example**
 ```javascript
-const { MidaMarketWatcher, } = require("@reiryoku/mida");
+import { MidaMarketWatcher, } from "@reiryoku/mida";
 
 const marketWatcher = new MidaMarketWatcher({ brokerAccount: myAccount, });
 
@@ -27,11 +29,11 @@ marketWatcher.on("tick", (event) => {
 ```
 
 ## Candlesticks listener
-Candlesticks being closed can be listened through the `watchPeriods` and `timeframes` options.
+Candlesticks being closed can be listened through the `watchPeriods` and `timeframes` directives.
 
-- Example
+- **Example**
 ```javascript
-const { MidaMarketWatcher, MidaTimeframe } = require("@reiryoku/mida");
+import { MidaMarketWatcher, MidaTimeframe, } from "@reiryoku/mida";
 
 const marketWatcher = new MidaMarketWatcher({ brokerAccount: myAccount, });
 
@@ -46,18 +48,22 @@ marketWatcher.on("period-close", (event) => {
 ```
 
 ## unwatch()
-Removes all watch directives from a symbol. If the intention is just to remove specific directives, it's recommended to
-override the watch directives by using `watch()`.
+Removes all watch directives from a symbol. If it's necessary to remove specific directives, it's recommended to
+override the watch directives with `watch()`.
 
-- Interface
+- **Interface**
 ```typescript
-unwatch (symbol: string): Promise<void>;
+class MidaMarketWatcher {
+    unwatch (symbol: string): Promise<void>;
+}
 ```
 
 ## getSymbolDirectives()
 Returns the watch directives of a symbol.
 
-- Interface
+- **Interface**
 ```typescript
-getSymbolDirectives (symbol: string): MidaMarketWatcherDirectives | undefined;
+class MidaMarketWatcher {
+    getSymbolDirectives (symbol: string): MidaMarketWatcherDirectives | undefined;
+}
 ```
