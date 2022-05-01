@@ -13,5 +13,8 @@ const myAccount = await Mida.login("cTrader", {
     clientId: "...",
     clientSecret: "...",
     accessToken: "...",
+    cTraderBrokerAccountId: "...",
 });
 ```
+
+Read [how to use cTrader accounts](/open-api/) to get a `clientId`, `clientSecret`, `accessToken` and `cTraderBrokerAccountId`.

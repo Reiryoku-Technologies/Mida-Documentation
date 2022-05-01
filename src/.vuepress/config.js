@@ -58,10 +58,30 @@ module.exports = {
                         "ticks-candlesticks/time-series",
                     ],
                 },
+                {
+                    title: "Expert Advisors",
+                    collapsable: false,
+                    children: [
+                        "expert-advisors/introduction",
+                        "expert-advisors/lifecycle",
+                        "expert-advisors/hooks",
+                    ],
+                },
+            ],
+        },
+        "/open-api/": {
+            children: [
+                "",
             ],
         },
     },
     plugins: [
+        [
+            "@vuepress/google-analytics",
+            {
+                "ga": "G-0TCFXWJKGP",
+            },
+        ],
         "@vuepress/plugin-back-to-top",
         "@vuepress/plugin-medium-zoom",
     ],
