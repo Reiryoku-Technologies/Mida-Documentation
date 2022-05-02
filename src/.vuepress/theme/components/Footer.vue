@@ -19,8 +19,6 @@ export default {
 
 <style lang="stylus" scoped>
 .footer
-    margin: 100px 0 0 0
-
     border-top: 1px solid $borderColor
 
 .reiryoku-logo
@@ -30,5 +28,5 @@ export default {
         fill rgb(150, 150, 150) !important
 
 .reiryoku-logo-link
-    margin: 4rem 0 2rem 0;
+    margin: 4rem 0;
 </style>

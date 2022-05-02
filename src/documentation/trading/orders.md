@@ -84,3 +84,23 @@ The Promise returned by `placeOrder()` resolves when the order enters in one of 
 The `resolverEvents` directive allows to change this behaviour by indicating a set of order events that will resolve the Promise.
 Passing an empty array will result in resolving the Promise immediately, this
 means that in most cases the returned order will be in `requested` state.
+
+## Status
+- **Interface**
+```typescript
+class MidaBrokerOrder {
+    get status (): MidaBrokerOrderStatus;
+}
+```
+- **Interface**
+```typescript
+enum MidaBrokerOrderStatus {
+    REQUESTED = "requested",
+    REJECTED = "rejected",
+    ACCEPTED = "accepted",
+    PENDING = "pending",
+    CANCELLED = "cancelled",
+    EXECUTED = "executed",
+    EXPIRED = "expired",
+}
+```

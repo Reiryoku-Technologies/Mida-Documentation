@@ -67,6 +67,13 @@ module.exports = {
                         "expert-advisors/hooks",
                     ],
                 },
+                {
+                    title: "Technical Indicators",
+                    collapsable: false,
+                    children: [
+                        "technical-indicators/introduction",
+                    ],
+                },
             ],
         },
         "/open-api/": {
@@ -84,6 +91,5 @@ module.exports = {
         ],
         "@vuepress/plugin-back-to-top",
         "@vuepress/plugin-medium-zoom",
-        "vuepress-plugin-clean-urls",
     ],
 };

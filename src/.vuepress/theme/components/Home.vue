@@ -109,6 +109,26 @@
             </div>
             <Content class="theme-default-content custom"/>
         </main>
+        <div class="flex flex--100 ea-box">
+            <div class="flex flex--100 flex--y-align-center stream-box">
+                <div class="flex flex--100 flex--x-align-center">
+                    <p class="description">
+                        The TypeScript framework for algotrading<br>
+                        in global financial markets
+                    </p>
+                </div>
+                <div class="flex flex--100 flex--x-align-center">
+                    <NavLink
+                        class="action-button"
+                        :item="actionLink"
+                    />
+                    <NavLink
+                        class="install-button"
+                        :item="installLink"
+                    />
+                </div>
+            </div>
+        </div>
         <Footer/>
     </div>
 </template>
@@ -203,7 +223,7 @@ export default {
   display block
 
   .features
-    margin-top 100px
+    margin 100px 0
 
   .feature
     max-width 30%
@@ -330,4 +350,9 @@ export default {
         transform scale(-1, 1) rotateY(45deg) translateY(-400px)
     100%
         transform scale(-1, 1) rotateY(45deg) translateY(0)
+
+
+.ea-box
+    height 400px
+    border-top 1px solid $borderColor
 </style>

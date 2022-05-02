@@ -14,7 +14,8 @@ Plugins must be registered in the application main entry point.
 
 - **Example**
 ```javascript
-import { Mida, } from "reiryoku/mida";
+import { Mida, } from "@reiryoku/mida";
+import cTraderPlugin from "@reiryoku/mida-ctrader";
 
-Mida.use(require("@reiryoku/mida-ctrader"));
+Mida.use(cTraderPlugin);
 ```
