@@ -4,9 +4,9 @@ actionText: Quick Start →
 actionLink: /documentation/
 features:
 - title: Approachable
-  details: Feature 1 Description
+  details: A clean, simple and intuitive TypeScript API with first-class documentation.
 - title: Versatile
-  details: Feature 2 Description
+  details: A complete and incrementally adoptable ecosystem that scales between a library and a full-featured framework.
 - title: Broker-neutral
-  details: Feature 3 Description
+  details: A single API for algotrading with hundreds of brokers and exchanges.
 ---

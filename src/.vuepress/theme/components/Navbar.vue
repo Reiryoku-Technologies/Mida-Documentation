@@ -7,7 +7,7 @@
             <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
         </div>
         <div class="flex flex--60 flex--x-align-end right-box">
-            <SearchBox v-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
+            <SearchBox v-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"/>
             <NavLinks class="links"/>
         </div>
     </header>
