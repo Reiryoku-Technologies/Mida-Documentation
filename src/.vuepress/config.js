@@ -68,7 +68,7 @@ module.exports = {
                     ],
                 },
                 {
-                    title: "Technical Indicators",
+                    title: "Indicators",
                     collapsable: false,
                     children: [
                         "technical-indicators/introduction",

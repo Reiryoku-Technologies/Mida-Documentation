@@ -8,5 +8,5 @@ features:
 - title: Versatile
   details: A complete and incrementally adoptable ecosystem that scales between a library and a full-featured framework.
 - title: Broker-neutral
-  details: A single API for algotrading with hundreds of brokers and exchanges.
+  details: A single TypeScript API for trading with hundreds of exchanges and brokers.
 ---

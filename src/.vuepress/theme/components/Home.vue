@@ -80,7 +80,7 @@
             <div class="flex flex--100 flex--y-align-center stream-box">
                 <div class="flex flex--100 flex--x-align-center">
                     <p class="description">
-                        The TypeScript framework for algotrading<br>
+                        The TypeScript framework for trading<br>
                         in global financial markets
                     </p>
                 </div>
@@ -109,26 +109,6 @@
             </div>
             <Content class="theme-default-content custom"/>
         </main>
-        <div class="flex flex--100 ea-box">
-            <div class="flex flex--100 flex--y-align-center stream-box">
-                <div class="flex flex--100 flex--x-align-center">
-                    <p class="description">
-                        The TypeScript framework for algotrading<br>
-                        in global financial markets
-                    </p>
-                </div>
-                <div class="flex flex--100 flex--x-align-center">
-                    <NavLink
-                        class="action-button"
-                        :item="actionLink"
-                    />
-                    <NavLink
-                        class="install-button"
-                        :item="installLink"
-                    />
-                </div>
-            </div>
-        </div>
         <Footer/>
     </div>
 </template>
@@ -183,6 +163,7 @@ export default {
     z-index 5000
 
 .description
+    max-width 850px
     margin-top 0
     font-size 42px
     font-weight bold
