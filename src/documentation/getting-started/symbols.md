@@ -1,13 +1,12 @@
 # Symbols
-Symbols are represented by the `MidaSymbol` class. A symbol represents a
-tradable asset pair.
+Symbols are represented by the `MidaSymbol` class. A symbol represents an asset pair.
 
 ## getSymbols()
-Returns the symbols available for the account.
+Used to get the account available symbols.
 
 - **Interface**
 ```typescript
-class MidaBrokerAccount {
+class MidaTradingAccount {
     getSymbols (): Promise<string[]>;
 }
 ```
@@ -17,16 +16,16 @@ const symbols = await myAccount.getSymbols();
 ```
 
 ## getSymbol()
-Returns a `MidaSymbol` instance or `undefined` if the symbol is not found.
+Used to get a symbol by its string representation, returns `undefined` if the symbol is not found.
 
 ::: warning
-- Symbols names are case sensitive
-- Symbols names may not be the same across all brokers
+- Symbols as string are case sensitive
+- Symbols as string may not be equal across all platforms
 :::
 
 - **Interface**
 ```typescript
-class MidaBrokerAccount {
+class MidaTradingAccount {
     getSymbol (symbol: string): Promise<MidaSymbol | undefined>;
 }
 ```
@@ -37,20 +36,80 @@ const eurUsd = await myAccount.getSymbol("EURUSD");
 const xauUsd = await myAccount.getSymbol("XAUUSD");
 ```
 
-## Assets
-Because a symbol represents a tradable asset pair, it's possible to access
+## getBid()
+Used to get the current bid price.
+
+- **Interface**
+```typescript
+class MidaSymbol {
+    getBid (): Promise<number>;
+}
+```
+- **Example**
+```javascript
+const xauUsd = await myAccount.getSymbol("BTCUSDT");
+const bidPrice = await xauUsd.getBid();
+```
+
+## getAsk()
+Used to get the current ask price.
+
+- **Interface**
+```typescript
+class MidaSymbol {
+    getAsk (): Promise<number>;
+}
+```
+- **Example**
+```javascript
+const xauUsd = await myAccount.getSymbol("BTCUSDT");
+const askPrice = await xauUsd.getAsk();
+```
+
+## getAverage()
+Used to get the current average price.
+
+- **Interface**
+```typescript
+class MidaSymbol {
+    getAveragePrice (): Promise<number>;
+}
+```
+- **Example**
+```javascript
+const xauUsd = await myAccount.getSymbol("BTCUSDT");
+const averagePrice = await xauUsd.getAveragePrice();
+```
+
+## isMarketOpen()
+Indicates if the market is open.
+
+- **Interface**
+```typescript
+class MidaSymbol {
+    isMarketOpen (): Promise<boolean>;
+}
+```
+- **Example**
+```javascript
+const xauUsd = await myAccount.getSymbol("XAUUSD");
+const isGoldMarketOpen = await xauUsd.isMarketOpen();
+```
+
+## Asset pair
+Because a symbol represents an asset pair, it's possible to access
 its assets. An asset pair is composed of a base asset and a quote asset.
 
 - **Interface**
 ```typescript
 class MidaSymbol {
-    get baseAsset (): MidaAsset;
-    get quoteAsset (): MidaAsset;
+    get baseAsset (): string;
+    get quoteAsset (): string;
 }
 ```
 - **Example**
 ```javascript
-const btcUsd = await myAccount.getSymbol("BTCUSD");
+const btcUsdt = await myAccount.getSymbol("BTCUSDT");
 const baseAsset = btcUsd.baseAsset; // <= "BTC"
-const quoteAsset = btcUsd.quoteAsset; // <= "USD"
+const quoteAsset = btcUsd.quoteAsset; // <= "USDT"
 ```

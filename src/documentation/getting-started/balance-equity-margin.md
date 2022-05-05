@@ -1,12 +1,12 @@
 # Balance, equity, and margin
-Balance, equity and margin can be retrieved from accounts.
+Balance, equity and margin can be retrieved from trading accounts.
 
 ## getBalance()
-Returns the account balance.
+Used to get the account primary asset balance.
 
 - **Interface**
 ```typescript
-class MidaBrokerAccount {
+class MidaTradingAccount {
     getBalance (): Promise<number>;
 }
 ```
@@ -15,12 +15,26 @@ class MidaBrokerAccount {
 const balance = await myAccount.getBalance();
 ```
 
-## getEquity()
-Returns the account equity.
+## getBalanceSheet()
+Used to get the account assets balance (all the owned assets).
 
 - **Interface**
 ```typescript
-class MidaBrokerAccount {
+class MidaTradingAccount {
+    getBalanceSheet (): Promise<MidaAssetStatement[]>;
+}
+```
+- **Example**
+```js
+const balanceSheet = await myAccount.getBalanceSheet();
+```
+
+## getEquity()
+Used to get the account primary asset balance if all the owned assets were liquidated for it.
+
+- **Interface**
+```typescript
+class MidaTradingAccount {
     getEquity (): Promise<number>;
 }
 ```
@@ -29,26 +43,12 @@ class MidaBrokerAccount {
 const equity = await myAccount.getEquity();
 ```
 
-## getFreeMargin()
-Returns the account free margin.
-
-- **Interface**
-```typescript
-class MidaBrokerAccount {
-    getFreeMargin (): Promise<number>;
-}
-```
-- **Example**
-```js
-const freeMargin = await myAccount.getFreeMargin();
-```
-
 ## getUsedMargin()
-Returns the account used margin.
+Used to get the account used margin
 
 - **Interface**
 ```typescript
-class MidaBrokerAccount {
+class MidaTradingAccount {
     getUsedMargin (): Promise<number>;
 }
 ```
@@ -57,12 +57,26 @@ class MidaBrokerAccount {
 const usedMargin = await myAccount.getUsedMargin();
 ```
 
-## getMarginLevel()
-Returns the account margin level or `NaN` if no margin is being used.
+## getFreeMargin()
+Used to get account the free margin
 
 - **Interface**
 ```typescript
-class MidaBrokerAccount {
+class MidaTradingAccount {
+    getFreeMargin (): Promise<number>;
+}
+```
+- **Example**
+```js
+const freeMargin = await myAccount.getFreeMargin();
+```
+
+## getMarginLevel()
+Used to get the account margin level, returns `NaN` if no margin is used
+
+- **Interface**
+```typescript
+class MidaTradingAccount {
     getMarginLevel (): Promise<number>;
 }
 ```
