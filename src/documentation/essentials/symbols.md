@@ -19,8 +19,8 @@ const symbols = await myAccount.getSymbols();
 Used to get a symbol by its string representation, returns `undefined` if the symbol is not found.
 
 ::: warning
-- Symbols as string are case sensitive
-- Symbols as string may not be equal across all platforms
+- Symbols as strings are case sensitive
+- Symbols as strings may not be equal across all platforms
 :::
 
 - **Interface**

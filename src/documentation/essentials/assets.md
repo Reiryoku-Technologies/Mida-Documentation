@@ -29,5 +29,5 @@ class MidaTradingAccount {
 ```
 - **Example**
 ```js
-const btcAddress = await myAccount.getCryptoAssetDepositAddress("BTC", "IOTA");
+const trxAddress = await myAccount.getCryptoAssetDepositAddress("TRX", "BNB");
 ```

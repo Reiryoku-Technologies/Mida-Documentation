@@ -1,8 +1,8 @@
 # Watchers
-The `MidaMarketWatcher` API is available to listen real-time ticks and candlesticks.
+The `MidaMarketWatcher` API makes possible to listen real-time ticks and candlesticks.
 
 ## watch()
-Used to watch a symbol based on the specified directives.
+Used to watch a symbol according to the specified directives.
 
 - **Interface**
 ```typescript
@@ -18,13 +18,13 @@ Ticks can be listened through the `watchTicks` directive.
 ```javascript
 import { MidaMarketWatcher, } from "@reiryoku/mida";
 
-const marketWatcher = new MidaMarketWatcher({ brokerAccount: myAccount, });
+const marketWatcher = new MidaMarketWatcher({ tradingAccount: myAccount, });
 
-await marketWatcher.watch("BTCUSD", { watchTicks: true, });
+await marketWatcher.watch("BTCUSDT", { watchTicks: true, });
 marketWatcher.on("tick", (event) => {
     const { tick, } = event.descriptor;
-    const btcUsdBid = tick.bid;
-    const btcUsdAsk = tick.ask;
+    const btcUsdtBid = tick.bid;
+    const btcUsdtAsk = tick.ask;
 });
 ```
 
@@ -37,18 +37,18 @@ import { MidaMarketWatcher, MidaTimeframe, } from "@reiryoku/mida";
 
 const marketWatcher = new MidaMarketWatcher({ brokerAccount: myAccount, });
 
-await marketWatcher.watch("BTCUSD", {
+await marketWatcher.watch("XAUUSD", {
     watchPeriods: true,
     timeframes: [ MidaTimeframe.H1, ],
 });
 marketWatcher.on("period-close", (event) => {
     const { period, } = event.descriptor;
-    const btcUsdClosePrice = period.close;
+    const goldClosePrice = period.close;
 });
 ```
 
 ## unwatch()
-Removes all watch directives from a symbol. If it's necessary to remove specific directives, it's recommended to
+Removes all watch directives from a symbol. If the intention is to remove specific directives, it's recommended to
 override the watch directives with `watch()`.
 
 - **Interface**

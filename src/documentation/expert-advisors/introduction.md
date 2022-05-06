@@ -1,46 +1,45 @@
 # Introduction
-The `MidaExpertAdvisor` API handles the creation and execution of expert advisors.<br>
-The first step to create an expert advisor (or trading bot) is extending the `MidaExpertAdvisor` class.
+The `MidaExpertAdvisor` API represents a trading bot. The first step to
+create a trading bot is extending the class.
 
-- **Example**
+- **Example 1**
 ```javascript
 import { MidaExpertAdvisor, } from "@reiryoku/mida";
 
-export class MyExpertAdvisor extends MidaExpertAdvisor {
+export class MyTradingStrategy extends MidaExpertAdvisor {
     async configure () {
-        // This hook is called once per instance
-        // and should be used as async constructor
+        // Called once per instance
+        // Use as async constructor
     }
     
     async onStart () {
-        // This hook is called when the EA starts its operativity
+        // Called when the trading bot starts its operativity
     }
     
     async onStop () {
-        // This hook is called when thea EA stops its operativity
+        // Called when the trading bot stops its operativity
     }
 }
 ```
 
-An expert advisor can be configured to listen market ticks and candlesticks, this is a core functionality useful
-to implement a strategy according to market conditions. Every expert advisor has an integrated market watcher.
+A trading bot can be configured to listen market ticks and candlesticks, this is a core functionality that can be
+used to implement a strategy according to market conditions. Every trading bot has an integrated market watcher.
 
-- **Example**
+- **Example 2**
 ```javascript
 import { MidaExpertAdvisor, MidaTimeframe, } from "@reiryoku/mida";
 
-export class MyExpertAdvisor extends MidaExpertAdvisor {
+export class MyTradingStrategy extends MidaExpertAdvisor {
     async configure () {
-        await this.watchTicks("BTCUSD");
-        await this.watchPeriods("BTCUSD", [
+        await this.watchTicks("BTCUSDT");
+        await this.watchPeriods("BTCUSDT", [
             MidaTimeframe.H1,
             MidaTimeframe.D1,
         ]);
     }
     
     async onTick (tick) {
-        const bid = tick.bid;
-        const ask = tick.ask;
+        const { bid, ask, } = tick;
     }
     
     async onPeriodClose (period) {

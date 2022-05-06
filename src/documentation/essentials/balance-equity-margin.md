@@ -44,7 +44,7 @@ const equity = await myAccount.getEquity();
 ```
 
 ## getUsedMargin()
-Used to get the account used margin
+Used to get the account used margin.
 
 - **Interface**
 ```typescript
@@ -58,7 +58,7 @@ const usedMargin = await myAccount.getUsedMargin();
 ```
 
 ## getFreeMargin()
-Used to get account the free margin
+Used to get account the free margin.
 
 - **Interface**
 ```typescript
@@ -72,7 +72,7 @@ const freeMargin = await myAccount.getFreeMargin();
 ```
 
 ## getMarginLevel()
-Used to get the account margin level, returns `NaN` if no margin is used
+Used to get the account margin level, returns `NaN` if no margin is used.
 
 - **Interface**
 ```typescript

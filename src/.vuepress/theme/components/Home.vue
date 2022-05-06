@@ -80,8 +80,8 @@
             <div class="flex flex--100 flex--y-align-center stream-box">
                 <div class="flex flex--100 flex--x-align-center">
                     <p class="description">
-                        The TypeScript framework for trading<br>
-                        in global financial markets
+                        The TypeScript framework for trading<br> in blockchains
+                        and global financial markets
                     </p>
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
@@ -96,10 +96,10 @@
                 </div>
             </div>
         </div>
-        <main class="flex flex--100 home" :aria-labelledby="data.heroText !== null ? 'main-title' : null">
-            <div v-if="data.features && data.features.length" class="flex flex--100 flex--x-align-between features">
+        <main class="flex flex--100 home" :aria-labelledby="descriptor.heroText !== null ? 'main-title' : null">
+            <div v-if="descriptor.features && descriptor.features.length" class="flex flex--100 flex--x-align-between features">
                 <div
-                    v-for="(feature, index) in data.features"
+                    v-for="(feature, index) in descriptor.features"
                     :key="index"
                     class="feature"
                 >
@@ -126,14 +126,14 @@ export default {
         NavLink,
     },
     computed: {
-        data () {
+        descriptor () {
             return this.$page.frontmatter;
         },
 
         actionLink () {
             return {
-                link: this.data.actionLink,
-                text: this.data.actionText,
+                link: this.descriptor.actionLink,
+                text: this.descriptor.actionText,
             };
         },
 
@@ -165,6 +165,8 @@ export default {
 .description
     max-width 850px
     margin-top 0
+    margin-left 30px
+    margin-right 30px
     font-size 42px
     font-weight bold
     letter-spacing 1px
@@ -198,7 +200,6 @@ export default {
     background-color transparent
 
 .home
-  padding 0 2rem 0
   max-width $homePageWidth
   margin 0 auto
   display block
@@ -230,11 +231,14 @@ export default {
       max-width 100%
       padding 0 2.5rem
 
+@media (max-width: 1000px)
+    .stream__text
+        display none
+
 @media (max-width: $MQMobileNarrow)
   .home
     padding-left 1.5rem
     padding-right 1.5rem
-
 
     .hero
       img

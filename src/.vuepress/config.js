@@ -18,6 +18,19 @@ module.exports = {
                 link: "/ecosystem/",
             },
             {
+                text: "Examples",
+                items: [
+                    { text: 'Trading Bots', items: [
+                            { text: 'Chinese', link: '/language/chinese/' },
+                            { text: 'Japanese', link: '/language/japanese/' }
+                        ] },
+                    { text: 'Arbitraging', items: [
+                            { text: 'Chinese', link: '/language/chinese/' },
+                            { text: 'Japanese', link: '/language/japanese/' }
+                        ] }
+                ]
+            },
+            {
                 text: "Community",
                 link: "/community/",
             },
@@ -33,12 +46,13 @@ module.exports = {
                     ],
                 },
                 {
-                    title: "Getting Started",
+                    title: "Essentials",
                     collapsable: false,
                     children: [
-                        "getting-started/login",
-                        "getting-started/balance-equity-margin",
-                        "getting-started/symbols",
+                        "essentials/login",
+                        "essentials/balance-equity-margin",
+                        "essentials/symbols",
+                        "essentials/assets",
                     ],
                 },
                 {
@@ -46,7 +60,7 @@ module.exports = {
                     collapsable: false,
                     children: [
                         "trading/orders",
-                        "trading/deals",
+                        "trading/trades",
                         "trading/positions",
                     ],
                 },
@@ -55,7 +69,8 @@ module.exports = {
                     collapsable: false,
                     children: [
                         "ticks-candlesticks/market-watcher",
-                        "ticks-candlesticks/time-series",
+                        "ticks-candlesticks/candlesticks",
+                        "ticks-candlesticks/timeframes",
                     ],
                 },
                 {

@@ -1,8 +1,12 @@
 <template>
     <div class="flex flex--100 flex--x-align-center footer">
-        <a href="https://github.com/Reiryoku-Technologies" target="_blank" class="reiryoku-logo-link">
-            <ReiryokuLogo class="reiryoku-logo"/>
-        </a>
+        <div class="flex flex--70 flex--x-align-center">
+            <p class="disclaimer">
+                Trading in blockchains and financial markets is highly speculative and carries a high level of risk.
+                It's possible to lose all your capital. This project may not be suitable for everyone, you should ensure that you understand the risks involved.
+                Mida and its contributors are not responsible for any technical inconvenience that may lead to money loss, for example a stop loss not being set.
+            </p>
+        </div>
     </div>
 </template>
 
@@ -29,4 +33,10 @@ export default {
 
 .reiryoku-logo-link
     margin: 4rem 0;
+
+.disclaimer
+    margin: 20px 0
+
+    font-size 12px
+    color: rgba(200, 200, 200, 0.44)
 </style>

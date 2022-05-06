@@ -133,6 +133,10 @@ export default {
 </script>
 
 <style lang="stylus">
+.nav-dropdown
+    background-color $backgroundColor !important
+    border 1px solid $borderColor !important
+
 .dropdown-wrapper
   cursor pointer
   .dropdown-title

@@ -1,67 +1,52 @@
 # Positions
-Positions are represented by the `MidaBrokerPosition` class.
-An open position represents a quantity of asset held by the account.
+Positions are represented by the `MidaPosition` class.
+An open position represents a volume of asset held by the account.
 
-## Execution price
-Because a position is the result of one or more deals which can be executed at different prices,
-the position execution price is the VWAP of the deals execution prices.
+## Open price
+Because a position is the result of one or more trades which may have been executed
+at different prices, the position open price is the VWAP of the execution prices of the assets
+being hold.
 
-## getUnrealizedNetProfit()
-Returns the unrealized net profit of the position.
+## getOpenPositions()
+Used to get the account open positions.
 
 - **Interface**
 ```typescript
-class MidaBrokerPosition {
-    getUnrealizedProfit (): Promise<number>;
+class MidaTradingAccount {
+    getOpenPositions (): Promise<MidaPosition[]>;
 }
 ```
 - **Example**
 ```javascript
-const actualNetProfit = await myPosition.getUnrealizedNetProfit();
-```
+const myOpenPositions = await myAccount.getOpenPositions();
+````
 
 ## addVolume()
-Places an order to for adding volume to the position.
+Used to place an order for adding volume to the position.
 
 - **Interface**
 ```typescript
-class MidaBrokerPosition {
-    addVolume (quantity): Promise<MidaBrokerOrder>;
+class MidaPosition {
+    addVolume (volume: number): Promise<MidaOrder>;
 }
 ```
 
 ## subtractVolume()
-Places an order to for subtracting volume to the position.
+Used to place an order for subtracting volume to the position.
 
 - **Interface**
 ```typescript
-class MidaBrokerPosition {
-    subtractVolume (quantity): Promise<MidaBrokerOrder>;
+class MidaPosition {
+    subtractVolume (volume: number): Promise<MidaOrder>;
 }
 ```
 
 ## close()
-Places an order for closing the position.
+Used to place an order for entirely closing the position.
 
 - **Interface**
 ```typescript
-class MidaBrokerPosition {
-    close (): Promise<MidaBrokerOrder>;
-}
-```
-
-## Orders and deals
-Orders and deals can be retrieved from positions.
-
-- **Interface**
-```typescript
-class MidaBrokerPosition {
-    get executedOrders (): MidaBrokerOrder[];
-}
-```
-- **Interface**
-```typescript
-class MidaBrokerPosition {
-    get executedDeals (): MidaBrokerDeal[];
+class MidaPosition {
+    close (): Promise<MidaOrder>;
 }
 ```

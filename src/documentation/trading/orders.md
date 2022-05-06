@@ -1,27 +1,50 @@
 # Orders
-Orders are represented by the `MidaBrokerOrder` class.
+Orders are represented by the `MidaOrder` class. An order is the intention
+to buy or sell an asset. An order is processed by the trading platform according to the client directives
+and is finalized with the execution of one or more trades.
 
 ## placeOrder()
-Used to place an order based on the specified directives.
+Used to place an order according to the specified directives.
 
 - **Interface**
 ```typescript
-class MidaBrokerAccount {
-    placeOrder (directives: MidaBrokerOrderDirectives): Promise<MidaBrokerOrder>;
+class MidaTradingAccount {
+    placeOrder (directives: MidaOrderDirectives): Promise<MidaOrder>;
 }
 ```
 
 ## Market orders
 Market orders are executed as soon as possible at the current market conditions.
 
-- **Example**
+- **Example 1**
 ```javascript
-import { MidaBrokerOrderDirection, } from "@reiryoku/mida";
+import { MidaOrderDirection, } from "@reiryoku/mida";
 
 const myOrder = await myAccount.placeOrder({
-    symbol: "BTCUSD",
-    direction: MidaBrokerOrderDirection.BUY,
+    symbol: "BTCUSDT",
+    direction: MidaOrderDirection.BUY,
     volume: 1,
+});
+```
+- **Example 2**
+```javascript
+import { MidaOrderDirection, MidaOrderTimeInForce, } from "@reiryoku/mida";
+
+const myOrder = await myAccount.placeOrder({
+    symbol: "#AAPL",
+    direction: MidaOrderDirection.SELL,
+    volume: 1000,
+    timeInForce: MidaOrderTimeInForce.FILL_OR_KILL,
+});
+```
+- **Example 3**
+```javascript
+import { MidaOrderDirection, } from "@reiryoku/mida";
+
+const myOrder = await myAccount.placeOrder({
+    symbol: "TRXUSDT",
+    direction: MidaOrderDirection.BUY,
+    volume: 1000,
 });
 ```
 
@@ -32,11 +55,11 @@ sell limit orders are executed when the bid price goes above the limit price.
 
 - **Example**
 ```javascript
-import { MidaBrokerOrderDirection, } from "@reiryoku/mida";
+import { MidaOrderDirection, } from "@reiryoku/mida";
 
 const myOrder = await myAccount.placeOrder({
     symbol: "XAUUSD",
-    direction: MidaBrokerOrderDirection.SELL,
+    direction: MidaOrderDirection.SELL,
     volume: 1,
     limit: 2000,
 });
@@ -49,14 +72,49 @@ sell stop orders are executed when the bid price goes below the stop price.
 
 - **Example**
 ```javascript
-import { MidaBrokerOrderDirection, } from "@reiryoku/mida";
+import { MidaOrderDirection, } from "@reiryoku/mida";
 
 const myOrder = await myAccount.placeOrder({
     symbol: "XAUUSD",
-    direction: MidaBrokerOrderDirection.SELL,
+    direction: MidaOrderDirection.SELL,
     volume: 1,
     stop: 2000,
 });
+```
+
+## Rejected orders
+Orders may get rejected for various reasons, for example one or more directives not being valid, the market being closed
+or the trading account not having enough funds.
+
+- **Example**
+```javascript
+import { MidaOrderDirection, MidaOrderRejection, } from "@reiryoku/mida";
+
+const myOrder = await myAccount.placeOrder({
+    symbol: "ETHUSDT",
+    direction: MidaOrderDirection.BUY,
+    volume: 10,
+});
+
+if (myOrder.isRejected) {
+    switch (myOrder.rejection) {
+        case MidaOrderRejection.MARKET_CLOSED: {
+            // . . .
+
+            break;
+        }
+        case MidaOrderRejection.NOT_ENOUGH_MONEY: {
+            // . . .
+
+            break;
+        }
+        case MidaOrderRejection.INVALID_SYMBOL: {
+            // . . .
+
+            break;
+        }
+    }
+}
 ```
 
 ## Protections
@@ -64,11 +122,11 @@ Take profit and stop loss can be optionally set with the `protection` directive.
 
 - **Example**
 ```javascript
-import { MidaBrokerOrderDirection, } from "@reiryoku/mida";
+import { MidaOrderDirection, } from "@reiryoku/mida";
 
 const myOrder = await myAccount.placeOrder({
-    symbol: "BTCUSD",
-    direction: MidaBrokerOrderDirection.BUY,
+    symbol: "BTCUSDT",
+    direction: MidaOrderDirection.BUY,
     volume: 1,
     protection: {
         takeProfit: 65000,
@@ -81,20 +139,48 @@ const myOrder = await myAccount.placeOrder({
 The Promise returned by `placeOrder()` resolves when the order enters in one of the following states:
 `rejected`, `pending`, `expired` or `executed`.
 
-The `resolverEvents` directive allows to change this behaviour by indicating a set of order events that will resolve the Promise.
+The `resolverEvents` directive makes possible to change this behaviour by indicating an array of order events that will resolve the Promise.
 Passing an empty array will result in resolving the Promise immediately, this
-means that in most cases the returned order will be in `requested` state.
+means that in most cases the returned order will still be in `requested` state.
+
+## getOrders()
+Used to get the account most recent orders for a symbol.
+
+- **Interface**
+```typescript
+class MidaTradingAccount {
+    getOrders (symbol: string): Promise<MidaOrder[]>;
+}
+```
+- **Example**
+```javascript
+const myTeslaOrders = await myAccount.getOrders("#TSLA");
+```
+
+## getPendingOrders()
+Used to get the account pending orders.
+
+- **Interface**
+```typescript
+class MidaTradingAccount {
+    getPendingOrders (): Promise<MidaOrder[]>;
+}
+```
+- **Example**
+```javascript
+const myPendingOrders = await myAccount.getPendingOrders();
+```
 
 ## Status
 - **Interface**
 ```typescript
-class MidaBrokerOrder {
-    get status (): MidaBrokerOrderStatus;
+class MidaOrder {
+    get status (): MidaOrderStatus;
 }
 ```
 - **Interface**
 ```typescript
-enum MidaBrokerOrderStatus {
+enum MidaOrderStatus {
     REQUESTED = "requested",
     REJECTED = "rejected",
     ACCEPTED = "accepted",
