@@ -29,10 +29,20 @@ class MidaTradingAccount {
     getSymbol (symbol: string): Promise<MidaSymbol | undefined>;
 }
 ```
-- **Example**
+- **Example 1**
 ```javascript
-const btcUsd = await myAccount.getSymbol("BTCUSD");
-const eurUsd = await myAccount.getSymbol("EURUSD");
+const btcUsdt = await myAccount.getSymbol("BTCUSDT");
+```
+- **Example 2**
+```javascript
+const ethUsdt = await myAccount.getSymbol("ETHSDT");
+```
+- **Example 3**
+```javascript
+const tslaUsd = await myAccount.getSymbol("#TSLA");
+```
+- **Example 4**
+```javascript
 const xauUsd = await myAccount.getSymbol("XAUUSD");
 ```
 
@@ -47,8 +57,8 @@ class MidaSymbol {
 ```
 - **Example**
 ```javascript
-const xauUsd = await myAccount.getSymbol("BTCUSDT");
-const bidPrice = await xauUsd.getBid();
+const btcUsdt = await myAccount.getSymbol("BTCUSDT");
+const bidPrice = await btcUsdt.getBid();
 ```
 
 ## getAsk()
@@ -62,8 +72,8 @@ class MidaSymbol {
 ```
 - **Example**
 ```javascript
-const xauUsd = await myAccount.getSymbol("BTCUSDT");
-const askPrice = await xauUsd.getAsk();
+const btcUsdt = await myAccount.getSymbol("BTCUSDT");
+const askPrice = await btcUsdt.getAsk();
 ```
 
 ## getAverage()
@@ -77,8 +87,8 @@ class MidaSymbol {
 ```
 - **Example**
 ```javascript
-const xauUsd = await myAccount.getSymbol("BTCUSDT");
-const averagePrice = await xauUsd.getAveragePrice();
+const btcUsdt = await myAccount.getSymbol("BTCUSDT");
+const averagePrice = await btcUsdt.getAveragePrice();
 ```
 
 ## isMarketOpen()

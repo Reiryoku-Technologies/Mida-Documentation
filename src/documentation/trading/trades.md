@@ -4,6 +4,18 @@ A trade (or deal) is the result of an order execution and represents the transac
 occurred to entirely or partially fill the order requested volume. An order can be executed entirely
 or partially with one or more trades.
 
+- **Interface**
+```typescript
+class MidaTrade {
+    get symbol: string;
+    get executionPrice: number;
+    get commission: number;
+    get commissionAsset: number;
+    get status: MidaTradeStatus;
+    get purpose: MidaTradePurpose;
+}
+```
+
 ## Opening trades
 An opening trade represents the transfer of an asset into the trading account, opening trades
 result in creating a new position or adding volume to an existing one.
@@ -27,7 +39,7 @@ class MidaTradingAccount {
 ```
 - **Example 1**
 ```javascript
-const myEthereumTrades = await myAccount.getTrades("ETHUSDT");
+const myEtherTrades = await myAccount.getTrades("ETHUSDT");
 ```
 - **Example 2**
 ```javascript

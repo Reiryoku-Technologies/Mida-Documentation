@@ -2,86 +2,28 @@
     <div>
         <div class="flex flex--full stream">
             <span class="stream__text stream__text--1 stream__text--repeat-y">
-                    /**
-                     * sort Used to order an array of integers in ascending order (O(n)).
-                     * @param {Array} arr
-                     * @return {Promise}
-                    */
-
-                    function sort (arr) {
-                        return new Promise(resolve => {
-                            const sorted = [];
-
-                            for (const item of arr) {
-                                setTimeout(item => sorted.push(item), item, item);
-                            }
-
-                            setTimeout(() => resolve(sorted), arr.reduce((a, b) => a + b, 0) + 1);
-                        });
-                    }
+                {{ animatedCode }}
             </span>
             <span class="stream__text stream__text--2 stream__text--repeat-y">
-                    /**
-                     * sort Used to order an array of integers in ascending order (O(n)).
-                     * @param {Array} arr
-                     * @return {Promise}
-                    */
-
-                    function sort (arr) {
-                        return new Promise(resolve => {
-                            const sorted = [];
-
-                            for (const item of arr) {
-                                setTimeout(item => sorted.push(item), item, item);
-                            }
-
-                            setTimeout(() => resolve(sorted), arr.reduce((a, b) => a + b, 0) + 1);
-                        });
-                    }
+                {{ animatedCode }}
             </span>
             <span class="stream__text stream__text--3 stream__text--repeat-y">
-                    /**
-                     * sort Used to order an array of integers in ascending order (O(n)).
-                     * @param {Array} arr
-                     * @return {Promise}
-                    */
-
-                    function sort (arr) {
-                        return new Promise(resolve => {
-                            const sorted = [];
-
-                            for (const item of arr) {
-                                setTimeout(item => sorted.push(item), item, item);
-                            }
-
-                            setTimeout(() => resolve(sorted), arr.reduce((a, b) => a + b, 0) + 1);
-                        });
-                    }
+                {{ animatedCode }}
             </span>
             <span class="stream__text stream__text--4 stream__text--repeat-y">
-                    /**
-                     * sort Used to order an array of integers in ascending order (O(n)).
-                     * @param {Array} arr
-                     * @return {Promise}
-                    */
-
-                    function sort (arr) {
-                        return new Promise(resolve => {
-                            const sorted = [];
-
-                            for (const item of arr) {
-                                setTimeout(item => sorted.push(item), item, item);
-                            }
-
-                            setTimeout(() => resolve(sorted), arr.reduce((a, b) => a + b, 0) + 1);
-                        });
-                    }
+                {{ animatedCode }}
             </span>
             <div class="flex flex--100 flex--y-align-center stream-box">
                 <div class="flex flex--100 flex--x-align-center">
+                    <p class="headline">
+                        The TypeScript framework for trading<br>
+                        in financial markets
+                    </p>
+                </div>
+                <div class="flex flex--100 flex--x-align-center">
                     <p class="description">
-                        The TypeScript framework for trading<br> in blockchains
-                        and global financial markets
+                        A full-featured ecosystem for trading financial assets<br>
+                        such as crypto, stocks, forex or commodities.
                     </p>
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
@@ -143,6 +85,28 @@ export default {
                 text: "Installation",
             };
         },
+
+        animatedCode () {
+            return `
+                /**
+                 * sort Used to order an array of integers in ascending order (O(n)).
+                 * @param {Array} arr
+                 * @return {Promise}
+                 */
+
+                 function sort (arr) {
+                    return new Promise(resolve => {
+                        const sorted = [];
+
+                        for (const item of arr) {
+                            setTimeout(item => sorted.push(item), item, item);
+                        }
+
+                        setTimeout(() => resolve(sorted), arr.reduce((a, b) => a + b, 0) + 1);
+                    });
+                 }
+            `;
+        }
     },
 };
 </script>
@@ -162,16 +126,24 @@ export default {
 
     z-index 5000
 
-.description
-    max-width 850px
-    margin-top 0
-    margin-left 30px
-    margin-right 30px
+.headline
+    max-width 900px
+    margin 0 30px !important
     font-size 42px
     font-weight bold
     letter-spacing 1px
     line-height 52px
     text-align center
+
+.description
+    max-width 900px
+    margin: 20px 30px 40px 30px !important
+    font-size 18px
+    font-weight 500
+    letter-spacing 0.2px
+    text-align center
+    color rgba(235, 235, 235, 0.6)
+
 
 .action-button
     padding 10px 24px

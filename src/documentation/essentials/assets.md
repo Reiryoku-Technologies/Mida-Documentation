@@ -10,13 +10,42 @@ class MidaTradingAccount {
     getAsset (asset: string): Promise<MidaAsset | undefined>;
 }
 ```
-- **Example**
+- **Example 1**
 ```js
 const btc = await myAccount.getAsset("BTC");
 ```
+- **Example 2**
+```js
+const eth = await myAccount.getAsset("ETH");
+```
+- **Example 3**
+```js
+const jpy = await myAccount.getAsset("JPY");
+```
+- **Example 4**
+```js
+const tsla = await myAccount.getAsset("#TSLA");
+```
 
 ## getBalance()
-...
+Used to get the asset balance.
+
+- **Interface**
+```typescript
+class MidaAsset {
+    getBalance(): Promise<MidaAssetStatement>;
+}
+```
+- **Example 1**
+```js
+const eth = await myAccount.getAsset("ETH");
+const ethBalance = await eth.getBalance();
+```
+- **Example 2**
+```js
+const xau = await myAccount.getAsset("XAU");
+const xauBalance = await xau.getBalance();
+```
 
 ## getCryptoAssetDepositAddress()
 Used to get the deposit address of a crypto asset.
@@ -24,7 +53,7 @@ Used to get the deposit address of a crypto asset.
 - **Interface**
 ```typescript
 class MidaTradingAccount {
-    getCryptoAssetDepositAddress (asset: string, network: string): Promise<string>;
+    getCryptoAssetDepositAddress (asset: string, net: string): Promise<string>;
 }
 ```
 - **Example**

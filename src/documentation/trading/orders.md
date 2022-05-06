@@ -152,7 +152,11 @@ class MidaTradingAccount {
     getOrders (symbol: string): Promise<MidaOrder[]>;
 }
 ```
-- **Example**
+- **Example 1**
+```javascript
+const myEtherOrders = await myAccount.getOrders("ETHUSDT");
+```
+- **Example 2**
 ```javascript
 const myTeslaOrders = await myAccount.getOrders("#TSLA");
 ```
@@ -190,3 +194,6 @@ enum MidaOrderStatus {
     EXPIRED = "expired",
 }
 ```
+
+## Events
+. . .
