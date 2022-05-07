@@ -25,6 +25,7 @@
             </template>
         </Sidebar>
         <Home v-if="$page.frontmatter.home"/>
+        <RoadmapView v-else-if="$page.frontmatter.roadmap"/>
         <Page
             v-else
             :sidebar-items="sidebarItems"
@@ -44,12 +45,14 @@ import Home from '@theme/components/Home.vue'
 import Navbar from '@theme/components/Navbar.vue'
 import Page from '@theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
+import RoadmapView from "../components/RoadmapView";
 import { resolveSidebarItems } from '../util'
 
 export default {
   name: 'Layout',
 
   components: {
+      RoadmapView,
     Home,
     Page,
     Sidebar,

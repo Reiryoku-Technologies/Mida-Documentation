@@ -18,19 +18,6 @@ module.exports = {
                 link: "/ecosystem/",
             },
             {
-                text: "Examples",
-                items: [
-                    { text: 'Trading Bots', items: [
-                            { text: 'Chinese', link: '/language/chinese/' },
-                            { text: 'Japanese', link: '/language/japanese/' }
-                        ] },
-                    { text: 'Arbitraging', items: [
-                            { text: 'Chinese', link: '/language/chinese/' },
-                            { text: 'Japanese', link: '/language/japanese/' }
-                        ] }
-                ]
-            },
-            {
                 text: "Community",
                 link: "/community/",
             },
@@ -78,7 +65,6 @@ module.exports = {
                     collapsable: false,
                     children: [
                         "expert-advisors/introduction",
-                        "expert-advisors/lifecycle",
                         "expert-advisors/hooks",
                     ],
                 },

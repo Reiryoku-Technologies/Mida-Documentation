@@ -1,5 +1,5 @@
 # Introduction
-The `MidaExpertAdvisor` API represents a trading bot. The first step to
+The `MidaExpertAdvisor` API handles the creation and execution of a trading bot, the first step to
 create a trading bot is extending the class.
 
 - **Example 1**
@@ -61,6 +61,13 @@ export class MyTradingStrategy extends MidaExpertAdvisor {
     }
 }
 ```
+
+## Lifecycle
+<br>
+
+<p align="center">
+    <img src="/expert-advisor-lifecycle.svg" width="600px">
+</p>
 
 ## watchTicks()
 Used to listen ticks which will trigger the `onTick()` hook.
