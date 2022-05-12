@@ -2,7 +2,7 @@
     <div class="flex flex--100 flex--x-align-center footer">
         <div class="flex flex--70 flex--x-align-center">
             <p class="disclaimer">
-                Trading in blockchains and financial markets is highly speculative and carries a high level of risk.
+                Trading in financial markets is highly speculative and carries a high level of risk.
                 It's possible to lose all your capital. This project may not be suitable for everyone, you should ensure that you understand the risks involved.
                 Mida and its contributors are not responsible for any technical inconvenience that may lead to money loss, for example a stop loss not being set.
                 <br>

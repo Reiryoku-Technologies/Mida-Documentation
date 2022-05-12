@@ -1,5 +1,5 @@
 # Assets
-Assets are represented by the `MidaAsset` class.
+Assets are represented by the `MidaAsset` API.
 
 ## getAsset()
 Used to get an asset by its string representation, returns `undefined` if the asset is not found.

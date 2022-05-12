@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="flex flex--full stream">
-            <div class="flex flex--100 flex--y-align-center stream-box">
-
+            <div class="flex flex--100 flex--x-align-center stream-box">
+                <Content class="theme-default-content custom"/>
             </div>
         </div>
         <Footer/>
@@ -133,8 +133,6 @@ export default {
 
 .stream
     width 100%
-    overflow hidden
-    height 400px
     position relative
 
     margin 0 !important

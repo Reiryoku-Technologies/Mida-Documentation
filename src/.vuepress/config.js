@@ -75,6 +75,14 @@ module.exports = {
                         "technical-indicators/introduction",
                     ],
                 },
+                {
+                    title: "Utilities",
+                    collapsable: false,
+                    children: [
+                        "utilities/dates",
+                        "utilities/events",
+                    ],
+                },
             ],
         },
         "/open-api/": {
@@ -92,5 +100,6 @@ module.exports = {
         ],
         "@vuepress/plugin-back-to-top",
         "@vuepress/plugin-medium-zoom",
+        //"@vuepress/active-header-links",
     ],
 };

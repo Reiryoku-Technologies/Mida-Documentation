@@ -51,6 +51,98 @@
             </div>
             <Content class="theme-default-content custom"/>
         </main>
+        <div class="flex flex--100 flex--y-align-center expert-advisor-box">
+            <div class="flex flex--100 flex--x-align-center">
+                <p class="headline">Start creating your first trading bot</p>
+            </div>
+            <div class="flex flex--100 flex--x-align-center">
+                <p class="description">
+                    Check out the expert advisor documentation to create<br>
+                    your first structured and platform-neutral trading bot.
+                </p>
+            </div>
+            <div class="flex flex--100 flex--x-align-center">
+                <NavLink
+                    class="action-button"
+                    :item="expertAdvisorLink"
+                />
+            </div>
+        </div>
+        <div class="flex flex--100 flex--y-align-center business-box">
+            <span class="stream__text stream__text--5 stream__text--repeat-y">
+
+
+                                                                                            ..,,,,,,,,,,,,,.
+                                                                                .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.
+                                                                         .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.
+                                                                    ,,,,,,,,,,,,,,,,,,,,,                       .,,,,,,,,,,,,,,,,,,,,
+                                                                ,,,,,,,,,,,,                                                  ,,,,,,,,,,,
+                                                            ,,,,,,,,                                                                 .,,,,,,,
+                                                        .,,,,,                                    .....                                     ,,,,
+                                                      ,,.                      .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.                       ,,
+                                                   ,                   ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,                   ,
+                                                                 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+                                                            ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+                                                       .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.....,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+                                                    ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,                                      ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.
+                                                ,,,,,,,,,,,,,,,,,,,,,,,,,,.                                                    .,,,,,,,,,,,,,,,,,,,,,,,,,
+                                             ,,,,,,,,,,,,,,,,,,,,,,,,                                                                ,,,,,,,,,,,,,,,,,,,,,,,
+                                           ,,,,,,,,,,,,,,,,,,,,,                    ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,                     ,,,,,,,,,,,,,,,,,,,,.
+                                        ,,,,,,,,,,,,,,,,,,,,                .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,                 ,,,,,,,,,,,,,,,,,,,
+                                      ,,,,,,,,,,,,,,,,,,,              ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,               ,,,,,,,,,,,,,,,,,,
+                                    ,,,,,,,,,,,,,,,,,,             ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.             ,,,,,,,,,,,,,,,,,
+                                  ,,,,,,,,,,,,,,,,,            ,,,,,,,,,,,,,,,,,,,,,,,,,,,.                   .,,,,,,,,,,,,,,,,,,,,,,,,,,,             ,,,,,,,,,,,,,,,,
+                                 ,,,,,,,,,,,,,,,.           ,,,,,,,,,,,,,,,,,,,,,,                                     ,,,,,,,,,,,,,,,,,,,,,,            .,,,,,,,,,,,,,,
+                                ,,,,,,,,,,,,,,           ,,,,,,,,,,,,,,,,,,,,                                               ,,,,,,,,,,,,,,,,,,,,            ,,,,,,,,,,,,,
+                                ,,,,,,,,,,,,          .,,,,,,,,,,,,,,,,,,                                                       ,,,,,,,,,,,,,,,,,,,           ,,,,,,,,,,,
+                               ,,,,,,,,,,,.         ,,,,,,,,,,,,,,,,,                 .,,,,,,,,,,,,,,,,,,,,,,,,,,,.                 ,,,,,,,,,,,,,,,,,          .,,,,,,,,,,
+                               ,,,,,,,,,,         ,,,,,,,,,,,,,,,,.              ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,              .,,,,,,,,,,,,,,,,          ,,,,,,,,,
+                              .,,,,,,,,          ,,,,,,,,,,,,,,,             ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,             ,,,,,,,,,,,,,,,.          ,,,,,,,
+                              ,,,,,,,,         ,,,,,,,,,,,,,,,            ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,            ,,,,,,,,,,,,,,,          ,,,,,,,
+                              ,,,,,,,         ,,,,,,,,,,,,,,           ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,           ,,,,,,,,,,,,,,.         ,,,,,,
+                              ,,,,,,        .,,,,,,,,,,,,,.          ,,,,,,,,,,,,,,,,,,,,.                     ,,,,,,,,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,,         ,,,,,
+                              ,,,,,        ,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,,,,,                               ,,,,,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,         ,,,,
+                              ,,,,        .,,,,,,,,,,,,,         .,,,,,,,,,,,,,,,,                                     ,,,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,         ,,,
+                              .,,.        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,,,               .,,,,,,,,,,.              ,,,,,,,,,,,,,,,,         ,,,,,,,,,,,,,.         ,
+                               ,,        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,,            ,,,,,,,,,,,,,,,,,,,,,.           ,,,,,,,,,,,,,,,         ,,,,,,,,,,,,,         ,
+                               ,.        ,,,,,,,,,,,,,        .,,,,,,,,,,,,,.          ,,,,,,,,,,,,,,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,,
+                                        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,.         .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,         ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,
+                                        ,,,,,,,,,,,,,        .,,,,,,,,,,,,,         ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,
+                                        ,,,,,,,,,,,,.        ,,,,,,,,,,,,,          ,,,,,,,,,,,,,        ,,,,,,,,,,,,,        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,
+                                        ,,,,,,,,,,,,.        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,        ,,,,,,,,,,,,,.       ,,,,,,,,,,,,,.        ,,,,,,,,,,,,,,
+                                        ,,,,,,,,,,,,,        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,        .,,,,,,,,,,,,,        ,,,,,,,,,,,,,,     ,,,,,,,,,,,,,,,
+                                        ,,,,,,,,,,,,,        ,,,,,,,,,,,,,.        .,,,,,,,,,,,,,         ,,,,,,,,,,,,,        ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+                                        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,         ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,        .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+                                        .,,,,,,,,,,,,         ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+                                         ,,,,,,,,,,,,,        ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,.         ,,,,,,,,,,,,,,           ,,,,,,,,,,,,,,,,,,,,,,
+                                         ,,,,,,,,,,,,,         ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,.             ,,,,,,,,,,,,,,
+                                           ,,,,,,,,,,,.        .,,,,,,,,,,,,,         ,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,,,
+                                            .,,,,,,,,,,         ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,,,,
+                                              .,,,,,,,,,         ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,,,          .,,,,,,,,,,,,,,,,,,,
+                                                 ,,,,,,,,         ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,,,,           ,,,,,,,,,,,,,,,,,,,,,,,,,       ,,,,
+                                                   ,,,,,,,         ,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,,.           .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+                                                      ,,,,,         ,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,,,.             ,,,,,,,,,,,,,,,,,,,,,,,,,
+                                                         ,,,          ,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,,,,               .,,,,,,,,,,,,,,,,,
+                                                            ,          ,,,,,,,,,,,,,,           ,,,,,,,,,,,,,,,,,,                    ,,,,,,,
+                                                                         ,,,,,,,,,,,,,,           ,,,,,,,,,,,,,,,,,,,.
+                                                                          .,,,,,,,,,,,,,,            ,,,,,,,,,,,,,,,,,,,,,
+                                                                            ,,,,,,,,,,,,,,,.            ,,,,,,,,,,,,,,,,,,,,,,,
+                                                                                 ,,,,,,,,,,,,,             ,,,,,,,,,,,,,
+                                                                                             .,,,
+
+
+
+            </span>
+            <div class="flex flex--100 flex--x-align-center">
+                <p class="headline">Grow your business with Mida</p>
+            </div>
+            <div class="flex flex--100 flex--x-align-center">
+                <p class="description">
+                    Mida helps scaling HFTs, algo/quant funds, exchanges and brokers,<br>
+                    contact reiryoku@reiryoku.com for business inquiries.
+                </p>
+            </div>
+        </div>
         <Footer/>
     </div>
 </template>
@@ -76,6 +168,13 @@ export default {
             return {
                 link: this.descriptor.actionLink,
                 text: this.descriptor.actionText,
+            };
+        },
+
+        expertAdvisorLink () {
+            return {
+                link: "/documentation/expert-advisors/introduction.html",
+                text: "Introduction →",
             };
         },
 
@@ -172,57 +271,66 @@ export default {
     background-color transparent
 
 .home
-  max-width $homePageWidth
-  margin 0 auto
-  display block
+    max-width $homePageWidth
+    margin 0 auto
+    display block
 
-  .features
-    margin 100px 0
+    .features
+        max-width 960px
+        margin 100px 0
 
-  .feature
-    max-width 30%
+    .feature
+        box-sizing border-box
+        flex 0 32%
+        padding 28px 36px
+
     h2
-      font-size 1.4rem
-      font-weight 500
-      border-bottom none
-      padding-bottom 0
-      color lighten($textColor, 10%)
+        font-size 20px
+        font-weight 600
+        color rgba(255, 255, 255, 0.87)
+        letter-spacing -0.2px
+        border-bottom none
+        padding-bottom 0
     p
-      color lighten($textColor, 25%)
-  .footer
-    padding 2.5rem
-    border-top 1px solid $borderColor
-    text-align center
-    color lighten($textColor, 25%)
+        font-size 15px
+        font-weight 400
+        letter-spacing 0.2px
+        color rgba(235, 235, 235, 0.6)
+
+    .footer
+        padding 2.5rem
+        border-top 1px solid $borderColor
+        text-align center
+        color lighten($textColor, 25%)
 
 @media (max-width: $MQMobile)
-  .home
-    .features
-      flex-direction column
-    .feature
-      max-width 100%
-      padding 0 2.5rem
+    .home
+        .features
+            flex-direction column
+        .feature
+            max-width 100%
+            padding 0 2.5rem
 
 @media (max-width: 1000px)
     .stream__text
         display none
 
 @media (max-width: $MQMobileNarrow)
-  .home
-    padding-left 1.5rem
-    padding-right 1.5rem
+    .home
+        padding-left 1.5rem
+        padding-right 1.5rem
 
-    .hero
-      img
-        max-height 210px
-        margin 2rem auto 1.2rem
-      h1
-        font-size 2rem
-      h1, .action
-        margin 1.2rem auto
-    .feature
-      h2
-        font-size 1.25rem
+        .hero
+            img
+                max-height 210px
+                margin 2rem auto 1.2rem
+            h1
+                font-size 2rem
+            h1, .action
+                margin 1.2rem auto
+        .feature
+            h2
+                font-size 1.25rem
 
 
 .stream
@@ -239,6 +347,33 @@ export default {
     backface-visibility hidden
 
     border-bottom 1px solid $borderColor
+
+
+.business-box
+    width 100%
+    overflow hidden
+    height 330px
+    position relative
+
+    margin 0 !important
+
+    border-top 1px solid $borderColor
+
+    .description
+        margin: 20px 30px 0 20px !important
+
+.expert-advisor-box
+    width 100%
+    overflow hidden
+    height 330px
+    position relative
+
+    margin 0 !important
+
+    border-top 1px solid $borderColor
+
+    .description
+        margin: 20px 30px 40px 30px !important
 
 
 .stream__text
@@ -282,6 +417,27 @@ export default {
     transform translateY(-400px)
 
     animation: test4 8s linear infinite;
+
+.stream__text--5
+    left: 50%
+    top: 50%
+    color rgba($linkColor)
+    user-select none
+    cursor default
+
+    transform translateY(-50%)
+    letter-spacing 2.2px
+
+    animation: business-fingerprint 8s linear infinite;
+
+
+@keyframes business-fingerprint
+    0%
+        opacity 0.2
+    50%
+        opacity 0.5
+    100%
+        opacity 0.2
 
 @keyframes test
     0%

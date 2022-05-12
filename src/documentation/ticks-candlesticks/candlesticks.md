@@ -1,5 +1,5 @@
 # Candlesticks
-Candlesticks are represented by the `MidaSymbolPeriod` class. Historical
+Candlesticks are represented by the `MidaSymbolPeriod` API. Historical
 prices are available in form of candlesticks (or periods), the amount of
 data available is at the trading platform discretion.
 

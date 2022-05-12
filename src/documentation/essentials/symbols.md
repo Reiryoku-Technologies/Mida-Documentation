@@ -1,5 +1,5 @@
 # Symbols
-Symbols are represented by the `MidaSymbol` class. A symbol represents an asset pair.
+Symbols are represented by the `MidaSymbol` API. A symbol represents an asset pair.
 
 ## getSymbols()
 Used to get the account available symbols.

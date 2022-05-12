@@ -1,5 +1,5 @@
 # Orders
-Orders are represented by the `MidaOrder` class. An order is the intention
+Orders are represented by the `MidaOrder` API. An order is the intention
 to buy or sell an asset. An order is processed by the trading platform according to the client directives
 and is finalized with the execution of one or more trades.
 

@@ -1,5 +1,5 @@
 # Positions
-Positions are represented by the `MidaPosition` class.
+Positions are represented by the `MidaPosition` API.
 An open position represents a volume of asset held by the account.
 
 ## getOpenPositions()

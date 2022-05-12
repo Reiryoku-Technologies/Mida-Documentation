@@ -1,6 +1,6 @@
 # Introduction
-The `MidaExpertAdvisor` API handles the creation and execution of a trading bot, the first step to
-create a trading bot is extending the class.
+The `MidaExpertAdvisor` API handles the creation and execution of a trading bot.
+The first step to create a trading bot is extending the `MidaExpertAdvisor` class.
 
 - **Example 1**
 ```javascript
@@ -94,6 +94,6 @@ class MidaExpertAdvisor {
 - **Interface**
 ```typescript
 class MidaExpertAdvisor {
-    placeOrder (directives: MidaBrokerOrderDirectives): Promise<MidaBrokerOrder>;
+    placeOrder (directives: MidaOrderDirectives): Promise<MidaBrokerOrder>;
 }
 ```

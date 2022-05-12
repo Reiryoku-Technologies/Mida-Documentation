@@ -1,5 +1,5 @@
 # Trades
-Trades are represented by the `MidaTrade` class.
+Trades are represented by the `MidaTrade` API.
 A trade (or deal) is the result of an order execution and represents the transaction
 occurred to entirely or partially fill the order requested volume. An order can be executed entirely
 or partially with one or more trades.
@@ -25,7 +25,7 @@ A closing trade represents the transfer of an asset out of the trading account, 
 result in entirely or partially closing the volume of an open position.
 
 ## Order execution price
-Orders with relatively small volume are usually entirely filled with a single trade, in this case
+Orders with relatively small volume are usually filled with a single trade, in this case
 the order execution price is equal to the trade execution price. In some cases. . .
 
 ## getTrades()
@@ -51,7 +51,7 @@ const myYenTrades = await myAccount.getTrades("USDJPY");
 ```
 
 ## Trades from orders
-Trades can be retrieved from orders and listened from open positions.
+Trades can be retrieved from orders.
 
 - **Interface**
 ```typescript
