@@ -25,10 +25,6 @@ module.exports = {
                 link: "/ecosystem/",
             },
             {
-                text: "Community",
-                link: "/community/",
-            },
-            {
                 text: "Repository",
                 link: "https://github.com/Reiryoku-Technologies/Mida"
             },
