@@ -25,7 +25,6 @@
             </template>
         </Sidebar>
         <Home v-if="$page.frontmatter.home"/>
-        <RoadmapView v-else-if="$page.frontmatter.roadmap"/>
         <Page
             v-else
             :sidebar-items="sidebarItems"
@@ -45,14 +44,12 @@ import Home from '@theme/components/Home.vue'
 import Navbar from '@theme/components/Navbar.vue'
 import Page from '@theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
-import RoadmapView from "../components/RoadmapView";
 import { resolveSidebarItems } from '../util'
 
 export default {
   name: 'Layout',
 
   components: {
-      RoadmapView,
     Home,
     Page,
     Sidebar,
@@ -115,9 +112,11 @@ export default {
   },
 
   mounted () {
-    this.$router.afterEach(() => {
-      this.isSidebarOpen = false
-    })
+      this.$router.afterEach(() => {
+          this.isSidebarOpen = false;
+      });
+
+      window.addEventListener("load", () => this.scrollToAnchors());
   },
 
   methods: {
@@ -125,6 +124,14 @@ export default {
       this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
       this.$emit('toggle-sidebar', this.isSidebarOpen)
     },
+
+      scrollToAnchors () {
+          const header = window.document.getElementById(window.location.hash.replace("#", ""));
+          const sidebarLink = window.document.querySelector(`.sidebar-links [href^="${window.location.pathname}${window.location.hash}"]`);
+
+          header?.scrollIntoView();
+          sidebarLink?.scrollIntoView();
+      },
 
     // side swipe
     onTouchStart (e) {

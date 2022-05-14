@@ -5,7 +5,7 @@ module.exports = {
         [ "meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }, ]
     ],
     themeConfig: {
-        repo: "Reiryoku-Technologies/Mida",
+        //repo: "Reiryoku-Technologies/Mida",
         displayAllHeaders: true,
         searchPlaceholder: "Search...",
         nav: [
@@ -20,6 +20,10 @@ module.exports = {
             {
                 text: "Community",
                 link: "/community/",
+            },
+            {
+                text: "Repository",
+                link: "https://github.com/Reiryoku-Technologies/Mida"
             },
         ],
         sidebar: {

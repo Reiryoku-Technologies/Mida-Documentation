@@ -51,9 +51,10 @@
             </div>
             <Content class="theme-default-content custom"/>
         </main>
+        <!--
         <div class="flex flex--100 flex--y-align-center expert-advisor-box">
             <div class="flex flex--100 flex--x-align-center">
-                <p class="headline">Start creating your first trading bot</p>
+                <p class="headline">Create your first trading bot</p>
             </div>
             <div class="flex flex--100 flex--x-align-center">
                 <p class="description">
@@ -68,71 +69,9 @@
                 />
             </div>
         </div>
+        -->
+        <!--
         <div class="flex flex--100 flex--y-align-center business-box">
-            <span class="stream__text stream__text--5 stream__text--repeat-y">
-
-
-                                                                                            ..,,,,,,,,,,,,,.
-                                                                                .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.
-                                                                         .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.
-                                                                    ,,,,,,,,,,,,,,,,,,,,,                       .,,,,,,,,,,,,,,,,,,,,
-                                                                ,,,,,,,,,,,,                                                  ,,,,,,,,,,,
-                                                            ,,,,,,,,                                                                 .,,,,,,,
-                                                        .,,,,,                                    .....                                     ,,,,
-                                                      ,,.                      .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.                       ,,
-                                                   ,                   ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,                   ,
-                                                                 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-                                                            ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-                                                       .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.....,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-                                                    ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,                                      ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.
-                                                ,,,,,,,,,,,,,,,,,,,,,,,,,,.                                                    .,,,,,,,,,,,,,,,,,,,,,,,,,
-                                             ,,,,,,,,,,,,,,,,,,,,,,,,                                                                ,,,,,,,,,,,,,,,,,,,,,,,
-                                           ,,,,,,,,,,,,,,,,,,,,,                    ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,                     ,,,,,,,,,,,,,,,,,,,,.
-                                        ,,,,,,,,,,,,,,,,,,,,                .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,                 ,,,,,,,,,,,,,,,,,,,
-                                      ,,,,,,,,,,,,,,,,,,,              ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,               ,,,,,,,,,,,,,,,,,,
-                                    ,,,,,,,,,,,,,,,,,,             ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.             ,,,,,,,,,,,,,,,,,
-                                  ,,,,,,,,,,,,,,,,,            ,,,,,,,,,,,,,,,,,,,,,,,,,,,.                   .,,,,,,,,,,,,,,,,,,,,,,,,,,,             ,,,,,,,,,,,,,,,,
-                                 ,,,,,,,,,,,,,,,.           ,,,,,,,,,,,,,,,,,,,,,,                                     ,,,,,,,,,,,,,,,,,,,,,,            .,,,,,,,,,,,,,,
-                                ,,,,,,,,,,,,,,           ,,,,,,,,,,,,,,,,,,,,                                               ,,,,,,,,,,,,,,,,,,,,            ,,,,,,,,,,,,,
-                                ,,,,,,,,,,,,          .,,,,,,,,,,,,,,,,,,                                                       ,,,,,,,,,,,,,,,,,,,           ,,,,,,,,,,,
-                               ,,,,,,,,,,,.         ,,,,,,,,,,,,,,,,,                 .,,,,,,,,,,,,,,,,,,,,,,,,,,,.                 ,,,,,,,,,,,,,,,,,          .,,,,,,,,,,
-                               ,,,,,,,,,,         ,,,,,,,,,,,,,,,,.              ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,              .,,,,,,,,,,,,,,,,          ,,,,,,,,,
-                              .,,,,,,,,          ,,,,,,,,,,,,,,,             ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,             ,,,,,,,,,,,,,,,.          ,,,,,,,
-                              ,,,,,,,,         ,,,,,,,,,,,,,,,            ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,            ,,,,,,,,,,,,,,,          ,,,,,,,
-                              ,,,,,,,         ,,,,,,,,,,,,,,           ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,           ,,,,,,,,,,,,,,.         ,,,,,,
-                              ,,,,,,        .,,,,,,,,,,,,,.          ,,,,,,,,,,,,,,,,,,,,.                     ,,,,,,,,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,,         ,,,,,
-                              ,,,,,        ,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,,,,,                               ,,,,,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,         ,,,,
-                              ,,,,        .,,,,,,,,,,,,,         .,,,,,,,,,,,,,,,,                                     ,,,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,         ,,,
-                              .,,.        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,,,               .,,,,,,,,,,.              ,,,,,,,,,,,,,,,,         ,,,,,,,,,,,,,.         ,
-                               ,,        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,,            ,,,,,,,,,,,,,,,,,,,,,.           ,,,,,,,,,,,,,,,         ,,,,,,,,,,,,,         ,
-                               ,.        ,,,,,,,,,,,,,        .,,,,,,,,,,,,,.          ,,,,,,,,,,,,,,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,,
-                                        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,.         .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,         ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,
-                                        ,,,,,,,,,,,,,        .,,,,,,,,,,,,,         ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,
-                                        ,,,,,,,,,,,,.        ,,,,,,,,,,,,,          ,,,,,,,,,,,,,        ,,,,,,,,,,,,,        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,
-                                        ,,,,,,,,,,,,.        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,        ,,,,,,,,,,,,,.       ,,,,,,,,,,,,,.        ,,,,,,,,,,,,,,
-                                        ,,,,,,,,,,,,,        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,        .,,,,,,,,,,,,,        ,,,,,,,,,,,,,,     ,,,,,,,,,,,,,,,
-                                        ,,,,,,,,,,,,,        ,,,,,,,,,,,,,.        .,,,,,,,,,,,,,         ,,,,,,,,,,,,,        ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-                                        ,,,,,,,,,,,,,         ,,,,,,,,,,,,,         ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,        .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-                                        .,,,,,,,,,,,,         ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-                                         ,,,,,,,,,,,,,        ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,.         ,,,,,,,,,,,,,,           ,,,,,,,,,,,,,,,,,,,,,,
-                                         ,,,,,,,,,,,,,         ,,,,,,,,,,,,,         ,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,.             ,,,,,,,,,,,,,,
-                                           ,,,,,,,,,,,.        .,,,,,,,,,,,,,         ,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,,,
-                                            .,,,,,,,,,,         ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,,,,
-                                              .,,,,,,,,,         ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,,,          .,,,,,,,,,,,,,,,,,,,
-                                                 ,,,,,,,,         ,,,,,,,,,,,,,,         ,,,,,,,,,,,,,,,,           ,,,,,,,,,,,,,,,,,,,,,,,,,       ,,,,
-                                                   ,,,,,,,         ,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,,.           .,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-                                                      ,,,,,         ,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,,,.             ,,,,,,,,,,,,,,,,,,,,,,,,,
-                                                         ,,,          ,,,,,,,,,,,,,,          ,,,,,,,,,,,,,,,,,               .,,,,,,,,,,,,,,,,,
-                                                            ,          ,,,,,,,,,,,,,,           ,,,,,,,,,,,,,,,,,,                    ,,,,,,,
-                                                                         ,,,,,,,,,,,,,,           ,,,,,,,,,,,,,,,,,,,.
-                                                                          .,,,,,,,,,,,,,,            ,,,,,,,,,,,,,,,,,,,,,
-                                                                            ,,,,,,,,,,,,,,,.            ,,,,,,,,,,,,,,,,,,,,,,,
-                                                                                 ,,,,,,,,,,,,,             ,,,,,,,,,,,,,
-                                                                                             .,,,
-
-
-
-            </span>
             <div class="flex flex--100 flex--x-align-center">
                 <p class="headline">Grow your business with Mida</p>
             </div>
@@ -143,19 +82,20 @@
                 </p>
             </div>
         </div>
-        <Footer/>
+        -->
+        <PrimaryFooter/>
     </div>
 </template>
 
 <script>
 import NavLink from "@theme/components/NavLink.vue";
-import Footer from "@theme/components/Footer";
+import PrimaryFooter from "@theme/components/PrimaryFooter";
 import LogoDark from "@theme/components/LogoDark";
 
 export default {
     name: "Home",
     components: {
-        Footer,
+        PrimaryFooter,
         LogoDark,
         NavLink,
     },
@@ -246,7 +186,7 @@ export default {
 
 .action-button
     padding 10px 24px
-    background-color $linkColor
+    background-image linear-gradient(45deg, $linkColor, darken($linkColor, 20%))
     color #1A1A1A
     font-size 18px
     border-radius 12px
@@ -258,7 +198,7 @@ export default {
 .install-button
     margin-left 20px
     padding 10px 24px
-    background-color $linkColor
+    background-image linear-gradient(45deg, $linkColor, darken($linkColor, 20%))
     color #1A1A1A
     font-size 18px
     border-radius 12px
@@ -286,11 +226,12 @@ export default {
 
     h2
         font-size 20px
-        font-weight 600
+        font-weight bold
         color rgba(255, 255, 255, 0.87)
-        letter-spacing -0.2px
+        letter-spacing 0.2px
         border-bottom none
         padding-bottom 0
+        font-style italic
     p
         font-size 15px
         font-weight 400
@@ -336,7 +277,7 @@ export default {
 .stream
     width 100%
     overflow hidden
-    height 400px
+    height 500px
     position relative
 
     margin 0 !important
@@ -373,7 +314,7 @@ export default {
     border-top 1px solid $borderColor
 
     .description
-        margin: 20px 30px 40px 30px !important
+        margin: 20px 30px 40px 20px !important
 
 
 .stream__text
@@ -382,7 +323,6 @@ export default {
     font-size 0.7rem
     white-space pre
 
-    z-index: 500;
 
 .stream__text--1
     left: 10px
@@ -418,37 +358,21 @@ export default {
 
     animation: test4 8s linear infinite;
 
-.stream__text--5
-    left: 50%
-    top: 50%
-    color rgba($linkColor)
-    user-select none
-    cursor default
-
-    transform translateY(-50%)
-    letter-spacing 2.2px
-
-    animation: business-fingerprint 8s linear infinite;
 
 
-@keyframes business-fingerprint
-    0%
-        opacity 0.2
-    50%
-        opacity 0.5
-    100%
-        opacity 0.2
+
+
 
 @keyframes test
     0%
         transform rotateY(45deg) translateY(0)
     100%
-        transform rotateY(45deg) translateY(400px)
+        transform rotateY(45deg) translateY(500px)
 
 
 @keyframes test2
     0%
-        transform rotateY(45deg)translateY(-400px)
+        transform rotateY(45deg)translateY(-500px)
     100%
         transform rotateY(45deg) translateY(0)
 
@@ -456,11 +380,11 @@ export default {
     0%
         transform scale(-1, 1) rotateY(45deg) translateY(0)
     100%
-        transform scale(-1, 1) rotateY(45deg) translateY(400px)
+        transform scale(-1, 1) rotateY(45deg) translateY(500px)
 
 @keyframes test4
     0%
-        transform scale(-1, 1) rotateY(45deg) translateY(-400px)
+        transform scale(-1, 1) rotateY(45deg) translateY(-500px)
     100%
         transform scale(-1, 1) rotateY(45deg) translateY(0)
 

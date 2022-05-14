@@ -5,18 +5,18 @@
         <PageEdit/>
         <PageNav v-bind="{ sidebarItems }"/>
         <slot name="bottom"/>
-        <Footer/>
+        <PrimaryFooter/>
     </main>
 </template>
 
 <script>
 import PageEdit from "@theme/components/PageEdit.vue";
 import PageNav from "@theme/components/PageNav.vue";
-import Footer from "@theme/components//Footer.vue";
+import PrimaryFooter from "@theme/components/PrimaryFooter.vue";
 
 export default {
     components: {
-        Footer,
+        PrimaryFooter,
         PageEdit,
         PageNav,
     },
