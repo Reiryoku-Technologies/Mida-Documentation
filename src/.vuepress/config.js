@@ -2,7 +2,14 @@ module.exports = {
     title: "Mida",
     head: [
         [ "meta", { name: "apple-mobile-web-app-capable", content: "yes" }, ],
-        [ "meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }, ]
+        [ "meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }, ],
+        [ "script", { async: "", src: "https://www.googletagmanager.com/gtag/js?id=G-38XQR880W6", }, ],
+        [ "script", {}, `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-38XQR880W6');
+        `]
     ],
     themeConfig: {
         //repo: "Reiryoku-Technologies/Mida",
@@ -96,14 +103,8 @@ module.exports = {
         },
     },
     plugins: [
-        [
-            "@vuepress/google-analytics",
-            {
-                "ga": "G-0TCFXWJKGP",
-            },
-        ],
         "@vuepress/plugin-back-to-top",
         "@vuepress/plugin-medium-zoom",
-        //"@vuepress/active-header-links",
+        "@vuepress/active-header-links",
     ],
 };
