@@ -1,5 +1,5 @@
 # Installation
-Use `npm init mida` to get started with Mida.
+To get started just use the command below in your terminal.
 
 ```console
 npm init mida

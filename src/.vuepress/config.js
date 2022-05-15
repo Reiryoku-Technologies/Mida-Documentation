@@ -3,13 +3,17 @@ module.exports = {
     head: [
         [ "meta", { name: "apple-mobile-web-app-capable", content: "yes" }, ],
         [ "meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }, ],
+        [ "meta", { property: "og:image", content: "https://www.mida.org/mida-background.jpg" }, ],
+        [ "link", { rel: "icon", type: "image/png", sizes: "16x16", href: "favicon-16x16.png" }, ],
+        [ "link", { rel: "icon", type: "image/png", sizes: "32x32", href: "favicon-32x32.png" }, ],
+        [ "link", { rel: "icon", type: "image/png", sizes: "96x96", href: "favicon-96x96.png" }, ],
         [ "script", { async: "", src: "https://www.googletagmanager.com/gtag/js?id=G-38XQR880W6", }, ],
         [ "script", {}, `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-38XQR880W6');
-        `]
+        `],
     ],
     themeConfig: {
         //repo: "Reiryoku-Technologies/Mida",
