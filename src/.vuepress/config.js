@@ -36,11 +36,11 @@ module.exports = {
         sidebar: {
             "/documentation/": [
                 {
-                    title: "Introduction",
+                    title: "Quick Start",
                     collapsable: false,
                     children: [
                         "",
-                        "introduction/installation",
+                        "quick-start/installation",
                     ],
                 },
                 {

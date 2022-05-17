@@ -16,8 +16,8 @@
             <div class="flex flex--100 flex--y-align-center stream-box">
                 <div class="flex flex--100 flex--x-align-center">
                     <p class="headline">
-                        The TypeScript framework for trading<br>
-                        in financial markets
+                        The framework for trading<br>
+                        in global financial markets
                     </p>
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
@@ -38,7 +38,7 @@
                 </div>
             </div>
         </div>
-        <main class="flex flex--100 home" :aria-labelledby="descriptor.heroText !== null ? 'main-title' : null">
+        <main class="flex flex--100 home">
             <div v-if="descriptor.features && descriptor.features.length" class="flex flex--100 flex--x-align-between features">
                 <div
                     v-for="(feature, index) in descriptor.features"
@@ -120,7 +120,7 @@ export default {
 
         installLink () {
             return {
-                link: "/documentation/introduction/installation.html",
+                link: "/documentation/quick-start/installation.html",
                 text: "Installation",
             };
         },
@@ -128,11 +128,10 @@ export default {
         animatedCode () {
             return `
                 /**
-                 * sort Used to order an array of integers in ascending order (O(n)).
+                 * sort Used to order an array of integers in ascending order (O(n))
                  * @param {Array} arr
                  * @return {Promise}
                  */
-
                  function sort (arr) {
                     return new Promise(resolve => {
                         const sorted = [];
@@ -220,6 +219,7 @@ export default {
         margin 100px 0
 
     .feature
+        position relative
         box-sizing border-box
         flex 0 32%
         padding 28px 36px
@@ -252,15 +252,8 @@ export default {
             max-width 100%
             padding 0 2.5rem
 
-@media (max-width: 1000px)
-    .stream__text
-        display none
-
 @media (max-width: $MQMobileNarrow)
     .home
-        padding-left 1.5rem
-        padding-right 1.5rem
-
         .hero
             img
                 max-height 210px
@@ -288,6 +281,14 @@ export default {
     backface-visibility hidden
 
     border-bottom 1px solid $borderColor
+
+
+@media (max-width: 1000px)
+    .stream
+        height 620px
+
+    .stream__text
+        display none
 
 
 .business-box
@@ -323,19 +324,18 @@ export default {
     font-size 0.7rem
     white-space pre
 
+    color rgba($linkColor, 0.8)
+
 
 .stream__text--1
     left: 10px
     top: 0
-
-    color rgba($linkColor, 0.8)
 
     animation: test 8s linear infinite;
 
 .stream__text--2
     left 10px
     top 0
-    color rgba($linkColor, 0.8)
 
     transform translateY(-400px)
 
@@ -345,14 +345,11 @@ export default {
     right: 10px
     top: 0
 
-    color rgba($linkColor, 0.8)
-
     animation: test3 8s linear infinite;
 
 .stream__text--4
     right 10px
     top 0
-    color rgba($linkColor, 0.8)
 
     transform translateY(-400px)
 
@@ -372,24 +369,19 @@ export default {
 
 @keyframes test2
     0%
-        transform rotateY(45deg)translateY(-500px)
+        transform rotateY(45deg) translateY(-500px)
     100%
         transform rotateY(45deg) translateY(0)
 
 @keyframes test3
     0%
-        transform scale(-1, 1) rotateY(45deg) translateY(0)
+        transform rotateY(135deg) translateY(0)
     100%
-        transform scale(-1, 1) rotateY(45deg) translateY(500px)
+        transform rotateY(135deg) translateY(500px)
 
 @keyframes test4
     0%
-        transform scale(-1, 1) rotateY(45deg) translateY(-500px)
+        transform rotateY(135deg) translateY(-500px)
     100%
-        transform scale(-1, 1) rotateY(45deg) translateY(0)
-
-
-.ea-box
-    height 400px
-    border-top 1px solid $borderColor
+        transform rotateY(135deg) translateY(0)
 </style>

@@ -8,5 +8,5 @@ features:
 - title: Versatile
   details: A complete and incrementally adoptable ecosystem that scales between a library and a full-featured framework.
 - title: Platform-neutral
-  details: A single TypeScript API for futures, spot, margin, options and CFDs trading on any platform.
+  details: A single TypeScript API for trading futures, spot, margin, options and CFDs on any platform.
 ---

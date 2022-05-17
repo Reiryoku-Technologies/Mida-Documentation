@@ -1,11 +1,11 @@
-# What is Mida?
-Mida is the TypeScript framework for trading financial assets such as stocks,
+# Introduction
+Mida is the framework for trading financial assets such as stocks,
 crypto, forex or commodities. It is designed from the ground up to provide a solid,
-versatile and platform-neutral environment for creating trading bots, indicators,
+versatile and platform-neutral environment focused on creating trading bots, indicators,
 market analysis tools or just trading applications depending on use cases.
 
-The Mida ecosystem is built from the ground up in TypeScript and some C for
-the performance-critical parts. The framework can be used with JavaScript/TypeScript
+The Mida ecosystem is built from the ground up in TypeScript and C++ for
+performance-critical parts. The framework can be used with JavaScript/TypeScript
 on Node.js.
 
 Join the community on [Discord](https://discord.gg/cKyWTUsr3q) and [Telegram](https://t.me/joinmida)
