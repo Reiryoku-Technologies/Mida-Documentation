@@ -24,6 +24,7 @@ export default {
 <style lang="stylus" scoped>
 .footer
     user-select none
+    cursor: default
     border-top 1px solid $borderColor
 
 .paragraph
