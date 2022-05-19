@@ -2,7 +2,7 @@
     <div class="flex flex--100 flex--x-align-center footer">
         <div class="flex flex--70 flex--x-align-center">
             <p class="paragraph">
-                Made with ❤️ by Vasile Pește
+                Made with ❤️ by <a href="https://twitter.com/vasile_peste" target="_blank">Vasile Pește</a>
                 <br>
                 Copyright © 2020-{{ currentYear }}
             </p>
