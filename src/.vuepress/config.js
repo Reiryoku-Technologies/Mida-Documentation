@@ -72,11 +72,11 @@ module.exports = {
                     ],
                 },
                 {
-                    title: "Expert Advisors",
+                    title: "Trading Systems",
                     collapsable: false,
                     children: [
-                        "expert-advisors/introduction",
-                        "expert-advisors/hooks",
+                        "trading-systems/introduction",
+                        "trading-systems/interfaces",
                     ],
                 },
                 {
@@ -96,7 +96,7 @@ module.exports = {
                 },
             ],
         },
-        "/open-api/": {
+        "/posts/": {
             children: [
                 "",
             ],

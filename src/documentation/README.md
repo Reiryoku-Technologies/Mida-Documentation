@@ -1,7 +1,7 @@
 # Introduction
 Mida is the framework for trading financial assets such as stocks,
 crypto, forex or commodities. It is designed from the ground up to provide a solid,
-versatile and platform-neutral environment focused on creating trading bots, indicators,
+versatile and platform-neutral environment for creating trading systems, indicators,
 market analysis tools or just trading applications depending on use cases.
 
 The Mida ecosystem is built from the ground up in TypeScript and C++ for
@@ -13,9 +13,9 @@ to get help you with your first steps.
 <br>
 
 ## Supported platforms
-Mida is platform-neutral, this means any trading platform could
+Mida is platform-neutral, this means that any trading platform could
 be easily integrated in the ecosystem. Here are some of the most
-popular platforms supported by Mida.
+popular trading platforms supported by Mida.
 
 <br><br>
 <p align="center"> 

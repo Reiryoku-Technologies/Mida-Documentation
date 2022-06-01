@@ -1,4 +1,4 @@
-# Hooks
+# Interfaces
 ## configure()
 Called before the start of the trading bot and once per instance. The hook should be used
 as asynchronous constructor.

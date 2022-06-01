@@ -51,25 +51,59 @@
             </div>
             <Content class="theme-default-content custom"/>
         </main>
-        <!--
-        <div class="flex flex--100 flex--y-align-center expert-advisor-box">
+        <div class="flex flex--100 flex--y-align-center last-posts">
+            <div class="flx flex--50 post-preview">
+                <div class="flex flex--100 flex--x-align-center">
+                    <p class="headline">Get started with Binance</p>
+                </div>
+                <div class="flex flex--100 flex--x-align-center">
+                    <p class="description">
+                        Check out the trading systems documentation to create and deploy<br>
+                        your first maintainable and platform-neutral trading system.
+                    </p>
+                </div>
+                <div class="flex flex--100 flex--x-align-center">
+                    <NavLink
+                        class="action-button"
+                        :item="{ link: '', text: 'Mida Binance' }"
+                    />
+                </div>
+            </div>
+            <div class="flx flex--50 post-preview">
+                <div class="flex flex--100 flex--x-align-center">
+                    <p class="headline">Get started with cTrader</p>
+                </div>
+                <div class="flex flex--100 flex--x-align-center">
+                    <p class="description">
+                        Check out the trading systems documentation to create and deploy<br>
+                        your first maintainable and platform-neutral trading system.
+                    </p>
+                </div>
+                <div class="flex flex--100 flex--x-align-center">
+                    <NavLink
+                        class="action-button"
+                        :item="{ link: '', text: 'Mida cTrader' }"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="flex flex--100 flex--y-align-center trading-systems-box">
             <div class="flex flex--100 flex--x-align-center">
-                <p class="headline">Create your first trading bot</p>
+                <p class="headline">Create your first trading system</p>
             </div>
             <div class="flex flex--100 flex--x-align-center">
                 <p class="description">
-                    Check out the expert advisor documentation to create<br>
-                    your first structured and platform-neutral trading bot.
+                    Check out the trading systems documentation to create and deploy<br>
+                    your first maintainable and platform-neutral trading system.
                 </p>
             </div>
             <div class="flex flex--100 flex--x-align-center">
                 <NavLink
                     class="action-button"
-                    :item="expertAdvisorLink"
+                    :item="tradingSystemsLink"
                 />
             </div>
         </div>
-        -->
         <!--
         <div class="flex flex--100 flex--y-align-center business-box">
             <div class="flex flex--100 flex--x-align-center">
@@ -111,10 +145,10 @@ export default {
             };
         },
 
-        expertAdvisorLink () {
+        tradingSystemsLink () {
             return {
-                link: "/documentation/expert-advisors/introduction.html",
-                text: "Introduction →",
+                link: "/documentation/trading-systems/introduction.html",
+                text: "Trading Systems →",
             };
         },
 
@@ -304,15 +338,35 @@ export default {
     .description
         margin: 20px 30px 0 20px !important
 
-.expert-advisor-box
+.trading-systems-box
     width 100%
     overflow hidden
-    height 330px
+    height 430px
     position relative
 
     margin 0 !important
 
     border-top 1px solid $borderColor
+
+    .description
+        margin: 20px 30px 40px 20px !important
+
+.last-posts
+    width 100%
+    overflow hidden
+    position relative
+
+    margin 0 !important
+
+    border-top 1px solid $borderColor
+
+    .post-preview
+        padding: 110px 0
+
+    .post-preview:first-child
+        width calc(50% - 1px)
+
+        border-right 1px solid $borderColor
 
     .description
         margin: 20px 30px 40px 20px !important

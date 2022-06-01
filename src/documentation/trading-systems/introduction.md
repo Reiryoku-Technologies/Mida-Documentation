@@ -1,12 +1,12 @@
 # Introduction
-The `MidaExpertAdvisor` API handles the creation and execution of a trading bot.
-The first step to create a trading bot is extending the `MidaExpertAdvisor` class.
+The `MidaTradingSystem` API handles the creation and execution of a trading system (or trading bot).
+The first step to create a trading bot is extending the `MidaTradingSystem` class.
 
 - **Example 1**
 ```javascript
-import { MidaExpertAdvisor, } from "@reiryoku/mida";
+import { MidaTradingSystem, } from "@reiryoku/mida";
 
-export class MyTradingStrategy extends MidaExpertAdvisor {
+export class MyTradingStrategy extends MidaTradingSystem {
     async configure () {
         // Called once per instance
         // Use as async constructor
@@ -27,9 +27,9 @@ used to implement a strategy according to market conditions. Every trading bot h
 
 - **Example 2**
 ```javascript
-import { MidaExpertAdvisor, MidaTimeframe, } from "@reiryoku/mida";
+import { MidaTradingSystem, MidaTimeframe, } from "@reiryoku/mida";
 
-export class MyTradingStrategy extends MidaExpertAdvisor {
+export class MyTradingStrategy extends MidaTradingSystem {
     async configure () {
         await this.watchTicks("BTCUSDT");
         await this.watchPeriods("BTCUSDT", [
@@ -74,7 +74,7 @@ Used to listen ticks which will trigger the `onTick()` hook.
 
 - **Interface**
 ```typescript
-class MidaExpertAdvisor {
+class MidaTradingSystem {
     watchTicks (symbol: string): Promise<void>;
 }
 ```
@@ -84,7 +84,7 @@ Used to listen closed candlesticks which will trigger the `onPeriodClose()` hook
 
 - **Interface**
 ```typescript
-class MidaExpertAdvisor {
+class MidaTradingSystem {
     watchPeriods (symbol: string, timeframes: number[] | number): Promise<void>;
 }
 ```
@@ -93,7 +93,7 @@ class MidaExpertAdvisor {
 
 - **Interface**
 ```typescript
-class MidaExpertAdvisor {
+class MidaTradingSystem {
     placeOrder (directives: MidaOrderDirectives): Promise<MidaBrokerOrder>;
 }
 ```
