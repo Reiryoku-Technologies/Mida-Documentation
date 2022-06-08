@@ -1,8 +1,27 @@
 # Assets
 Assets are represented by the `MidaAsset` API.
 
+::: tip
+An asset is a resource with economic value
+:::
+
+## getAssets()
+Used to get the assets available for the trading account.
+
+- **Interface**
+```typescript
+class MidaTradingAccount {
+    getAssets (): Promise<string[]>;
+}
+```
+
 ## getAsset()
 Used to get an asset by its string representation, returns `undefined` if the asset is not found.
+
+::: warning
+- Assets as strings are case sensitive
+- Assets as strings may not be equal across all trading platforms
+:::
 
 - **Interface**
 ```typescript
@@ -33,7 +52,7 @@ Used to get the asset balance.
 - **Interface**
 ```typescript
 class MidaAsset {
-    getBalance(): Promise<MidaAssetStatement>;
+    getBalance (): Promise<MidaAssetStatement>;
 }
 ```
 - **Example 1**

@@ -1,10 +1,16 @@
 # Dates
-In Mida all dates are represented by the `MidaDate` API. A Mida date is
-immutable and always represents a universal time (UTC).
+Dates are represented by the `MidaDate` API.
 
+::: tip
+Mida dates are immutable and universal time coordinated
+:::
+
+## MidaDate
 - **Interface**
 ```typescript
 class MidaDate {
+    constructor (descriptor?: number | string);
+    
     get timestamp (): number;
     get milliseconds (): number;
     get seconds (): number;

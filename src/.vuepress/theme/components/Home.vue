@@ -51,6 +51,7 @@
             </div>
             <Content class="theme-default-content custom"/>
         </main>
+        <!--
         <div class="flex flex--100 flex--y-align-center last-posts">
             <div class="flx flex--50 post-preview">
                 <div class="flex flex--100 flex--x-align-center">
@@ -65,7 +66,7 @@
                 <div class="flex flex--100 flex--x-align-center">
                     <NavLink
                         class="action-button"
-                        :item="{ link: '', text: 'Mida Binance' }"
+                        :item="{ link: '/posts/how-to-use-binance/', text: 'Mida Binance →' }"
                     />
                 </div>
             </div>
@@ -82,11 +83,12 @@
                 <div class="flex flex--100 flex--x-align-center">
                     <NavLink
                         class="action-button"
-                        :item="{ link: '', text: 'Mida cTrader' }"
+                        :item="{ link: '/posts/how-to-use-ctrader/', text: 'Mida cTrader →' }"
                     />
                 </div>
             </div>
         </div>
+        -->
         <div class="flex flex--100 flex--y-align-center trading-systems-box">
             <div class="flex flex--100 flex--x-align-center">
                 <p class="headline">Create your first trading system</p>

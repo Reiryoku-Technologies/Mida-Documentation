@@ -1,7 +1,11 @@
 # Orders
-Orders are represented by the `MidaOrder` API. An order is the intention
-to buy or sell an asset. An order is processed by the trading platform according to the client directives
-and is finalized with the execution of one or more trades.
+Orders are represented by the `MidaOrder` API.
+
+::: tip
+An order is the intention to buy or sell an asset. An order is
+processed by the trading platform according to the client directives
+and is finalized with the execution of one or more trades
+:::
 
 ## placeOrder()
 Used to place an order according to the specified directives.
@@ -33,8 +37,8 @@ import { MidaOrderDirection, MidaOrderTimeInForce, } from "@reiryoku/mida";
 const myOrder = await myAccount.placeOrder({
     symbol: "#AAPL",
     direction: MidaOrderDirection.SELL,
-    volume: 1000,
     timeInForce: MidaOrderTimeInForce.FILL_OR_KILL,
+    volume: 1,
 });
 ```
 - **Example 3**
@@ -42,9 +46,9 @@ const myOrder = await myAccount.placeOrder({
 import { MidaOrderDirection, } from "@reiryoku/mida";
 
 const myOrder = await myAccount.placeOrder({
-    symbol: "TRXUSDT",
+    symbol: "EURUSD",
     direction: MidaOrderDirection.BUY,
-    volume: 1000,
+    volume: 1,
 });
 ```
 
@@ -80,6 +84,19 @@ const myOrder = await myAccount.placeOrder({
     volume: 1,
     stop: 2000,
 });
+```
+
+## cancel()
+Used to cancel a pending order.
+- **Interface**
+```typescript
+class MidaOrder {
+    cancel (): Promise<void>;
+}
+```
+- **Example**
+```javascript
+await myOrder.cancel();
 ```
 
 ## Rejected orders
@@ -135,14 +152,6 @@ const myOrder = await myAccount.placeOrder({
 });
 ```
 
-## Resolvers
-The Promise returned by `placeOrder()` resolves when the order enters in one of the following states:
-`rejected`, `pending`, `expired` or `executed`.
-
-The `resolverEvents` directive makes possible to change this behaviour by indicating an array of order events that will resolve the Promise.
-Passing an empty array will result in resolving the Promise immediately, this
-means that in most cases the returned order will still be in `requested` state.
-
 ## getOrders()
 Used to get the account most recent orders for a symbol.
 
@@ -175,6 +184,14 @@ class MidaTradingAccount {
 const myPendingOrders = await myAccount.getPendingOrders();
 ```
 
+## Resolvers
+The Promise returned by `placeOrder()` resolves when the order enters in one of the following states:
+`rejected`, `pending`, `expired` or `executed`.
+
+The `resolverEvents` directive makes possible to change this behaviour by indicating an array of order events that will resolve the Promise.
+Passing an empty array will result in resolving the Promise immediately, this
+means that in most cases the returned order will still be in `requested` state.
+
 ## Status
 - **Interface**
 ```typescript
@@ -194,6 +211,3 @@ enum MidaOrderStatus {
     EXPIRED = "expired",
 }
 ```
-
-## Events
-. . .

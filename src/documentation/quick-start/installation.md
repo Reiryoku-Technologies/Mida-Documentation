@@ -1,7 +1,8 @@
 # Installation
-To get started use the command below in your terminal,
-the installer will pop up and create an empty Mida project.
+To get started with Mida simply use the command below in your terminal.
 
 ```console
 npm init mida
 ```
+
+The installer will pop up and guide you through the creation of a new Mida project.

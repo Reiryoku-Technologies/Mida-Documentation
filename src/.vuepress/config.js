@@ -29,11 +29,31 @@ module.exports = {
                 link: "/ecosystem/",
             },
             {
+                text: "Publications",
+                link: "",
+                items: [
+                    { text: "Test", link: "", }
+                ]
+            },
+            {
+                text: "Sponsors",
+                link: ""
+            },
+            {
                 text: "Repository",
                 link: "https://github.com/Reiryoku-Technologies/Mida"
             },
         ],
         sidebar: {
+            "/documentation/playground/": [
+                {
+                    title: "Quick Start",
+                    collapsable: false,
+                    children: [
+                        "",
+                    ],
+                },
+            ],
             "/documentation/": [
                 {
                     title: "Quick Start",
@@ -94,6 +114,13 @@ module.exports = {
                         "utilities/events",
                     ],
                 },
+                {
+                    title: "Advanced",
+                    collapsable: false,
+                    children: [
+                        "advanced/compose-periods",
+                    ],
+                }
             ],
         },
         "/posts/": {

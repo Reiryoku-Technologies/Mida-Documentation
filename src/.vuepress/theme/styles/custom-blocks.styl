@@ -9,16 +9,23 @@
     &.tip, &.warning, &.danger
         padding .1rem 1.5rem
         margin 1rem 0
+
     &.tip
-        background-color #f3f5f7
-        border-color #42b983
+        background-color rgb(36, 36, 36)
+        border 1px solid transparent
+
+        *
+            color rgba(235, 235, 235, 0.6)
+
+        .custom-block-title
+            color rgba(255, 255, 255, 0.87)
+
     &.warning
         border: 1px solid rgb(255, 197, 23)
 
         .custom-block-title
             color rgb(255, 197, 23)
-        a
-            color $textColor
+
     &.danger
         border-color darken(red, 20%)
         color darken(red, 70%)

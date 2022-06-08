@@ -1,6 +1,9 @@
 # Positions
 Positions are represented by the `MidaPosition` API.
-An open position represents a volume of asset held by the account.
+
+::: tip
+An open position represents a volume of asset held by the account
+:::
 
 ## getOpenPositions()
 Used to get the account open positions.

@@ -1,11 +1,15 @@
 # Candlesticks
-Candlesticks are represented by the `MidaSymbolPeriod` API. Historical
+Candlesticks are represented by the `MidaPeriod` API.
+
+::: tip
+Historical
 prices are available in form of candlesticks (or periods), the amount of
-data available is at the trading platform discretion.
+data available depends on the trading platform
+:::
 
 - **Interface**
 ```typescript
-class MidaSymbolPeriod {
+class MidaPeriod {
     get symbol (): string;
     get startDate (): MidaDate;
     get timeframe (): number;
@@ -14,15 +18,21 @@ class MidaSymbolPeriod {
     get low (): number;
     get close (): number;
     get volume (): number;
+    get body (): number;
+    get momentum (): number;
+    get ohlc (): number[];
+    get isBullish (): boolean;
+    get isNeutral (): boolean;
+    get isBearish (): boolean;
     get endDate (): MidaDate;
 }
 ```
 
 ## getSymbolPeriods()
-Used to get the most recent periods (or candlesticks) of a symbol.
+Used to get the most recent candlesticks of a symbol.
 
 ::: warning
-- The candlesticks are ordered from newest to oldest
+- Candlesticks are ordered from oldest to newest
 :::
 
 - **Interface**
@@ -49,7 +59,7 @@ The period OHLC (open, high, low, close).
 
 - **Interface**
 ```typescript
-class MidaSymbolPeriod {
+class MidaPeriod {
     get ohlc (): number[];
 }
 ```

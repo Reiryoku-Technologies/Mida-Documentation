@@ -169,7 +169,7 @@ export default {
       line-height 1.7rem
       h4
         margin 0.45rem 0 0
-        border-top 1px solid #eee
+        border-top 1px solid $borderColor
         padding 1rem 1.5rem 0.45rem 1.25rem
       .dropdown-subitem-wrapper
         padding 0

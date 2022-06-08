@@ -1,7 +1,11 @@
 # Account login
-A trading account is required to get started. Mida is platform-neutral,
-this means that any trading platform could be easily integrated in the ecosystem.
-Up to now various exchanges and brokers are directly supported.
+A trading account is required to get started, check the [supported trading platforms](/documentation/#trading-platforms).
+
+::: tip
+Mida is platform-neutral, this means that any trading platform could
+be easily integrated in the ecosystem. Trading systems/applications built with Mida can be
+easily executed on different trading platforms without code changes
+:::
 
 ## login()
 Used to login into a trading account.

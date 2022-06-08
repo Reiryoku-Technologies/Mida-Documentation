@@ -1,8 +1,12 @@
 # Symbols
-Symbols are represented by the `MidaSymbol` API. A symbol represents an asset pair.
+Symbols are represented by the `MidaSymbol` API.
+
+::: tip
+A symbol represents an asset pair
+:::
 
 ## getSymbols()
-Used to get the account available symbols.
+Used to get the symbols available for the account.
 
 - **Interface**
 ```typescript
@@ -20,7 +24,7 @@ Used to get a symbol by its string representation, returns `undefined` if the sy
 
 ::: warning
 - Symbols as strings are case sensitive
-- Symbols as strings may not be equal across all platforms
+- Symbols as strings may not be equal across all trading platforms
 :::
 
 - **Interface**
@@ -47,7 +51,7 @@ const xauUsd = await myAccount.getSymbol("XAUUSD");
 ```
 
 ## getBid()
-Used to get the current bid price.
+Used to get the current best bid price for the symbol.
 
 - **Interface**
 ```typescript
@@ -62,7 +66,7 @@ const bidPrice = await btcUsdt.getBid();
 ```
 
 ## getAsk()
-Used to get the current ask price.
+Used to get the current best ask price for the symbol.
 
 - **Interface**
 ```typescript
@@ -77,22 +81,22 @@ const askPrice = await btcUsdt.getAsk();
 ```
 
 ## getAverage()
-Used to get the current average price.
+Used to get the current average price for the symbol.
 
 - **Interface**
 ```typescript
 class MidaSymbol {
-    getAveragePrice (): Promise<number>;
+    getAverage (): Promise<number>;
 }
 ```
 - **Example**
 ```javascript
 const btcUsdt = await myAccount.getSymbol("BTCUSDT");
-const averagePrice = await btcUsdt.getAveragePrice();
+const averagePrice = await btcUsdt.getAverage();
 ```
 
 ## isMarketOpen()
-Indicates if the market is open.
+Indicates if the symbol market is open.
 
 - **Interface**
 ```typescript
@@ -104,22 +108,4 @@ class MidaSymbol {
 ```javascript
 const xauUsd = await myAccount.getSymbol("XAUUSD");
 const isGoldMarketOpen = await xauUsd.isMarketOpen();
-```
-
-## Asset pair
-Because a symbol represents an asset pair, it's possible to access
-its assets. An asset pair is composed of a base asset and a quote asset.
-
-- **Interface**
-```typescript
-class MidaSymbol {
-    get baseAsset (): string;
-    get quoteAsset (): string;
-}
-```
-- **Example**
-```javascript
-const btcUsdt = await myAccount.getSymbol("BTCUSDT");
-const baseAsset = btcUsd.baseAsset; // <= "BTC"
-const quoteAsset = btcUsd.quoteAsset; // <= "USDT"
 ```

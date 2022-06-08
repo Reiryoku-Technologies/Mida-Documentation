@@ -1,16 +1,28 @@
 # Trades
 Trades are represented by the `MidaTrade` API.
+
+::: tip
 A trade (or deal) is the result of an order execution and represents the transaction
-occurred to entirely or partially fill the order requested volume. An order can be executed entirely
-or partially with one or more trades.
+occurred to entirely or partially fill the volume requested by the order, an order can be executed entirely
+or partially with one or more trades
+:::
 
 - **Interface**
 ```typescript
 class MidaTrade {
     get symbol: string;
+    get volume: number;
     get executionPrice: number;
+    get executionDate: MidaDate;
+    get rejectionDate: MidaDate;
+    get orderId: string;
+    get positionId: string;
+    get grossProfit: number;
+    get grossProfitAsset: string;
     get commission: number;
-    get commissionAsset: number;
+    get commissionAsset: string;
+    get swap: number;
+    get swapAsset: string;
     get status: MidaTradeStatus;
     get purpose: MidaTradePurpose;
 }
@@ -26,7 +38,8 @@ result in entirely or partially closing the volume of an open position.
 
 ## Order execution price
 Orders with relatively small volume are usually filled with a single trade, in this case
-the order execution price is equal to the trade execution price. In some cases. . .
+the order execution price is equal to the trade execution price. When orders are executed
+with multiple trades, the execution price is equal to the VWAP of the trades execution prices.
 
 ## getTrades()
 Used to get the account most recent trades (or deals) for a symbol.
@@ -52,6 +65,10 @@ const myYenTrades = await myAccount.getTrades("USDJPY");
 
 ## Trades from orders
 Trades can be retrieved from orders.
+
+::: warning
+Certain trading platforms may not provide trades for historical orders
+:::
 
 - **Interface**
 ```typescript
