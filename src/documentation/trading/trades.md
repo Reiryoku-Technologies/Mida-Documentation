@@ -41,6 +41,12 @@ Orders with relatively small volume are usually filled with a single trade, in t
 the order execution price is equal to the trade execution price. When orders are executed
 with multiple trades, the execution price is equal to the VWAP of the trades execution prices.
 
+<br>
+<p align="center"> 
+    <img src="/vwap.svg" alt="" width="344px">
+</p>
+
+
 ## getTrades()
 Used to get the account most recent trades (or deals) for a symbol.
 

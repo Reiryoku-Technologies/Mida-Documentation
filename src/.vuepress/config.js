@@ -25,15 +25,16 @@ module.exports = {
                 link: "/documentation/",
             },
             {
-                text: "Ecosystem",
-                link: "/ecosystem/",
-            },
-            {
-                text: "Publications",
+                text: "Guides",
                 link: "",
                 items: [
-                    { text: "Test", link: "", }
-                ]
+                    { text: "How to use Binance", link: "", },
+                    { text: "How to use cTrader", link: "", },
+                ],
+            },
+            {
+                text: "Ecosystem",
+                link: "/ecosystem/",
             },
             {
                 text: "Sponsors",

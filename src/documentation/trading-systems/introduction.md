@@ -1,12 +1,14 @@
 # Introduction
-The `MidaTradingSystem` API handles the creation and execution of a trading system (or trading bot).
-The first step to create a trading bot is extending the `MidaTradingSystem` class.
+Trading systems (or trading bots) are represented by the `MidaTradingSystem` API.
+
+## Creation
+The first step to create a trading system is extending the `MidaTradingSystem` class.
 
 - **Example 1**
 ```javascript
 import { MidaTradingSystem, } from "@reiryoku/mida";
 
-export class MyTradingStrategy extends MidaTradingSystem {
+export class MyTradingSystem extends MidaTradingSystem {
     async configure () {
         // Called once per instance
         // Use as async constructor
@@ -22,14 +24,14 @@ export class MyTradingStrategy extends MidaTradingSystem {
 }
 ```
 
-A trading bot can be configured to listen market ticks and candlesticks, this is a core functionality that can be
-used to implement a strategy according to market conditions. Every trading bot has an integrated market watcher.
+A trading system can be configured to listen market ticks and candlesticks, this is a core functionality that can be
+used to implement a strategy according to market conditions. Every trading system has an integrated market watcher.
 
 - **Example 2**
 ```javascript
 import { MidaTradingSystem, MidaTimeframe, } from "@reiryoku/mida";
 
-export class MyTradingStrategy extends MidaTradingSystem {
+export class MyTradingSystem extends MidaTradingSystem {
     async configure () {
         await this.watchTicks("BTCUSDT");
         await this.watchPeriods("BTCUSDT", [
@@ -90,6 +92,10 @@ class MidaTradingSystem {
 ```
 
 ## placeOrder()
+
+::: warning
+Only orders placed in this way are associated to the trading system
+:::
 
 - **Interface**
 ```typescript

@@ -49,7 +49,21 @@ class MidaPosition {
 }
 ```
 
+## changeProtection()
+Used to change the protection of an open position.
+
+- **Interface**
+```typescript
+class MidaPosition {
+    changeProtection (protection: MidaProtection): Promise<MidaProtectionChange>;
+}
+```
+
 ## Open price
-Because a position is the result of one or more trades which may have been executed
-at different prices, the position open price is the VWAP of the execution prices of the assets
-being hold.
+A position is the result of one or more trades, the open price
+of a position is the VWAP of the execution prices of the assets being hold.
+
+<br>
+<p align="center"> 
+    <img src="/vwap.svg" alt="" width="344px">
+</p>
