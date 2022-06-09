@@ -38,7 +38,7 @@ Used to get the most recent candlesticks of a symbol.
 - **Interface**
 ```typescript
 class MidaTradingAccount {
-    getSymbolPeriods (symbol: string, timeframe: number): Promise<MidaSymbolPeriod[]>;
+    getSymbolPeriods (symbol: string, timeframe: number): Promise<MidaPeriod[]>;
 }
 ```
 - **Example 1**

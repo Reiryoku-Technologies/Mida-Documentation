@@ -1,6 +1,9 @@
 # Timeframes
-Timeframes are represented by the `MidaTimeframe` API. In Mida all timeframes
-are expressed as a `number` of seconds.
+Timeframes are represented by the `MidaTimeframe` API.
+
+::: tip
+In Mida timeframes are expressed as a `number` of seconds
+:::
 
 - **Interface**
 ```typescript
@@ -31,8 +34,12 @@ enum MidaTimeframe {
 ```
 
 ## parseTimeframe()
-Used to convert a string timeframe to number. String timeframes must be in the
-Mida format: `S*`, `M*`, `H*`, `W*`, `MO*` and `Y*`.
+Used to convert a string timeframe to number.
+
+::: warning
+Timeframes as strings must be in the
+Mida format: `S*`, `M*`, `H*`, `W*`, `MO*` or `Y*`
+:::
 
 - **Interface**
 ```typescript
@@ -44,15 +51,21 @@ namespace MidaTimeframe {
 ```javascript
 import { MidaTimeframe, } from "@reiryoku/mida";
 
-const M45 = MidaTimeframe.parseTimeframe("M45"); // <= 2700
+const M45 = MidaTimeframe.parseTimeframe("M3"); // <= 180
 ```
 - **Example 2**
 ```javascript
 import { MidaTimeframe, } from "@reiryoku/mida";
 
-const D3 = MidaTimeframe.parseTimeframe("D3"); // <= 259200
+const M45 = MidaTimeframe.parseTimeframe("M45"); // <= 2700
 ```
 - **Example 3**
+```javascript
+import { MidaTimeframe, } from "@reiryoku/mida";
+
+const D3 = MidaTimeframe.parseTimeframe("D3"); // <= 259200
+```
+- **Example 4**
 ```javascript
 import { MidaTimeframe, } from "@reiryoku/mida";
 

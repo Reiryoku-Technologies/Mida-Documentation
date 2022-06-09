@@ -1,5 +1,12 @@
 # Watchers
-The `MidaMarketWatcher` API makes possible to listen real-time ticks and candlesticks.
+Real-time ticks and candlesticks can be listened through the `MidaMarketWatcher` API.
+
+- **Interface**
+```typescript
+class MidaMarketWatcher {
+    constructor (parameters: MidaMarketWatcherParameters);
+}
+```
 
 ## watch()
 Used to watch a symbol according to the specified directives.
@@ -35,7 +42,7 @@ Candlesticks being closed can be listened through the `watchPeriods` and `timefr
 ```javascript
 import { MidaMarketWatcher, MidaTimeframe, } from "@reiryoku/mida";
 
-const marketWatcher = new MidaMarketWatcher({ brokerAccount: myAccount, });
+const marketWatcher = new MidaMarketWatcher({ tradingAccount: myAccount, });
 
 await marketWatcher.watch("XAUUSD", {
     watchPeriods: true,
@@ -48,8 +55,7 @@ marketWatcher.on("period-close", (event) => {
 ```
 
 ## unwatch()
-Removes all watch directives from a symbol. If the intention is to remove specific directives, it's recommended to
-override the watch directives with `watch()`.
+Removes all watch directives from a symbol.
 
 - **Interface**
 ```typescript
