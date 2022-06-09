@@ -13,7 +13,7 @@ class MidaTradingAccount {
 ````
 
 ## getBalance()
-Used to get the balance of the account primary asset.
+Used to get the account primary asset balance
 
 - **Interface**
 ```typescript
@@ -27,7 +27,7 @@ const balance = await myAccount.getBalance();
 ```
 
 ## getBalanceSheet()
-Used to get the balance of the assets owned by the account.
+Used to get the account assets balance (all the owned assets)
 
 - **Interface**
 ```typescript
@@ -41,7 +41,7 @@ const balanceSheet = await myAccount.getBalanceSheet();
 ```
 
 ## getEquity()
-Used to get the balance of the account primary asset if all the owned assets were liquidated for it.
+Used to get the account primary asset balance if all the owned assets were liquidated for it.
 
 - **Interface**
 ```typescript
@@ -55,7 +55,7 @@ const equity = await myAccount.getEquity();
 ```
 
 ## getUsedMargin()
-Used to get the margin used by the account.
+Used to get the account used margin.
 
 - **Interface**
 ```typescript
@@ -69,7 +69,7 @@ const usedMargin = await myAccount.getUsedMargin();
 ```
 
 ## getFreeMargin()
-Used to get the free margin of the account.
+Used to get account the free margin.
 
 - **Interface**
 ```typescript
@@ -83,7 +83,7 @@ const freeMargin = await myAccount.getFreeMargin();
 ```
 
 ## getMarginLevel()
-Used to get the margin level of the account, returns `NaN` if no margin is used.
+Used to get the account margin level, returns `NaN` if no margin is used.
 
 - **Interface**
 ```typescript

@@ -74,8 +74,8 @@ of a position is the VWAP of the opening trades whose assets are still held.
 Used to change the protection of an open position.
 
 ::: warning
-The protection is merged and overwrites the active one, this means that passing
-an empty protection will keep the actual one, explicit values must be passed to change a protection
+Explicit values must be passed to change a protection, this means
+that passing an empty protection will not change anything
 :::
 
 - **Interface**

@@ -86,6 +86,21 @@ const myOrder = await myAccount.placeOrder({
 });
 ```
 
+## Impact existing positions
+The position id can be passed in the directives to make the order
+affect an existing position.
+
+- **Example**
+```javascript
+import { MidaOrderDirection, } from "@reiryoku/mida";
+
+const myOrder = await myAccount.placeOrder({
+    positionId: "12345",
+    direction: MidaOrderDirection.BUY,
+    volume: 1,
+});
+```
+
 ## Execution price
 Orders with relatively small volume are usually executed with a single trade, in this case
 the order execution price is equal to the trade execution price, when an order is executed

@@ -61,13 +61,37 @@ const myYenTrades = await myAccount.getTrades("USDJPY");
 ## Trades from orders
 Trades can be retrieved from orders.
 
-::: warning
-Certain trading platforms may not provide trades for historical orders
-:::
-
 - **Interface**
 ```typescript
 class MidaOrder {
     get trades (): MidaTrade[];
 }
+```
+
+Trades can also be listened from accounts, orders and positions.
+
+- **Example 1**
+```typescript
+myAccount.on("trade", (event) => {
+    const { trade, } = event.descriptor;
+});
+```
+- **Example 2**
+```typescript
+const myOrder = await myAccount.placeOrder({
+    symbol: "BTCUSDT",
+    direction: MidaOrderDirection.BUY,
+    volume: 1,
+    listeners: {
+        trade (event) {
+            const { trade, } = event.descriptor;
+        },
+    },
+});
+```
+- **Example 3**
+```typescript
+myPosition.on("trade", (event) => {
+    const { trade, } = event.descriptor;
+});
 ```
