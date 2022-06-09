@@ -86,6 +86,23 @@ const myOrder = await myAccount.placeOrder({
 });
 ```
 
+## Execution price
+Orders with relatively small volume are usually executed with a single trade, in this case
+the order execution price is equal to the trade execution price, when an order is executed
+with multiple trades, the execution price is equal to the VWAP of its trades.
+
+<br>
+<p align="center"> 
+    <img src="/vwap.svg" alt="" width="344px">
+</p>
+
+- **Interface**
+```typescript
+class MidaOrder {
+    get executionPrice (): number | undefined;
+}
+```
+
 ## cancel()
 Used to cancel a pending order.
 - **Interface**

@@ -36,17 +36,6 @@ result in creating a new position or adding volume to an existing one.
 A closing trade represents the transfer of an asset out of the trading account, closing trades
 result in entirely or partially closing the volume of an open position.
 
-## Order execution price
-Orders with relatively small volume are usually filled with a single trade, in this case
-the order execution price is equal to the trade execution price. When orders are executed
-with multiple trades, the execution price is equal to the VWAP of the trades execution prices.
-
-<br>
-<p align="center"> 
-    <img src="/vwap.svg" alt="" width="344px">
-</p>
-
-
 ## getTrades()
 Used to get the account most recent trades (or deals) for a symbol.
 
