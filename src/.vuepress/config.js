@@ -97,7 +97,7 @@ module.exports = {
                     collapsable: false,
                     children: [
                         "trading-systems/introduction",
-                        "trading-systems/interfaces",
+                        "trading-systems/lifecycle-hooks",
                     ],
                 },
                 {
