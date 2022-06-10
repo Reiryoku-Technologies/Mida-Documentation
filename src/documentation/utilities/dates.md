@@ -5,7 +5,7 @@ Dates are represented by the `MidaDate` API.
 Mida dates are immutable and universal time coordinated
 :::
 
-## MidaDate
+## MidaDate()
 - **Interface**
 ```typescript
 class MidaDate {

@@ -148,17 +148,17 @@ const myOrder = await myAccount.placeOrder({
 if (myOrder.isRejected) {
     switch (myOrder.rejection) {
         case MidaOrderRejection.MARKET_CLOSED: {
-            // . . .
+            // ...
 
             break;
         }
         case MidaOrderRejection.NOT_ENOUGH_MONEY: {
-            // . . .
+            // ...
 
             break;
         }
         case MidaOrderRejection.INVALID_SYMBOL: {
-            // . . .
+            // ...
 
             break;
         }

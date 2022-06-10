@@ -6,6 +6,7 @@ The primary asset of a trading account is decided by the trading platform,
 for forex brokers usually it is a currency like `USD`, `EUR` or `GBP`,
 for crypto exchanges usually it is `BTC` or `USDT`.
 
+- **Interface**
 ````typescript
 class MidaTradingAccount {
     get primaryAsset (): string;
@@ -13,7 +14,7 @@ class MidaTradingAccount {
 ````
 
 ## getBalance()
-Used to get the account primary asset balance
+Used to get the account primary asset balance.
 
 - **Interface**
 ```typescript
@@ -27,7 +28,7 @@ const balance = await myAccount.getBalance();
 ```
 
 ## getBalanceSheet()
-Used to get the account assets balance (all the owned assets)
+Used to get the account assets balance (all the owned assets).
 
 - **Interface**
 ```typescript

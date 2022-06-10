@@ -2,11 +2,11 @@
 Symbols are represented by the `MidaSymbol` API.
 
 ::: tip
-A symbol represents an asset pair
+A symbol represents a pair of assets
 :::
 
 ## getSymbols()
-Used to get the symbols available for the account.
+Used to get the account available symbols.
 
 - **Interface**
 ```typescript
