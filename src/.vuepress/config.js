@@ -16,17 +16,16 @@ module.exports = {
         `],
     ],
     themeConfig: {
-        //repo: "Reiryoku-Technologies/Mida",
         displayAllHeaders: true,
         searchPlaceholder: "Search...",
         nav: [
             {
-                text: "Handbook",
-                link: "/handbook/",
-            },
-            {
                 text: "Documentation",
                 link: "/documentation/",
+            },
+            {
+                text: "Handbook",
+                link: "/handbook/",
             },
             /*
             {

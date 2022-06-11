@@ -1,7 +1,7 @@
 # Introduction
 Trading systems (trading bots or expert advisors) are represented by the `MidaTradingSystem` API.
 
-## Trading system creation
+## MidaTradingSystem()
 The first step to create a trading system is extending the `MidaTradingSystem` class.
 
 - **Example 1**
