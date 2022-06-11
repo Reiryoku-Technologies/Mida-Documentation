@@ -21,9 +21,14 @@ module.exports = {
         searchPlaceholder: "Search...",
         nav: [
             {
+                text: "Handbook",
+                link: "/handbook/",
+            },
+            {
                 text: "Documentation",
                 link: "/documentation/",
             },
+            /*
             {
                 text: "Guides",
                 link: "",
@@ -31,7 +36,7 @@ module.exports = {
                     { text: "How to use Binance", link: "", },
                     { text: "How to use cTrader", link: "", },
                 ],
-            },
+            },*/
             {
                 text: "Ecosystem",
                 link: "/ecosystem/",
