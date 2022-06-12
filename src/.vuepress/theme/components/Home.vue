@@ -58,7 +58,7 @@
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
                     <p class="description">
-                        Check out the handbook for a quick and full API overview
+                        Check out the handbook for a quick and complete API overview.
                     </p>
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
@@ -74,7 +74,7 @@
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
                     <p class="description">
-                        Check out the ecosystem for creating trading applications
+                        Check out the ecosystem for completing your trading requirements.
                     </p>
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
@@ -87,12 +87,12 @@
         </div>
         <div class="flex flex--100 flex--y-align-center trading-systems-box">
             <div class="flex flex--100 flex--x-align-center">
-                <p class="headline">Create your first trading system</p>
+                <p class="headline">Trading Systems</p>
             </div>
             <div class="flex flex--100 flex--x-align-center">
                 <p class="description">
                     Check out the trading systems documentation to create and deploy<br>
-                    your first maintainable and platform-neutral trading system.
+                    your first maintainable, platform-neutral trading system.
                 </p>
             </div>
             <div class="flex flex--100 flex--x-align-center">

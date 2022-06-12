@@ -3,6 +3,18 @@ A free live or demo trading account can be created at of one the many brokers su
 for example [Pepperstone](https://pepperstone.com), [FxPro](https://www.fxpro.com), [Axiory](http://axiory.com),
 [ICMarkets](https://www.icmarkets.com) or [RoboForex](http://roboforex.com).
 
+## The plugin
+The Mida cTrader plugin must be installed for using cTrader with Mida.
+```
+npm i @reiryoku/mida-ctrader
+```
+```javascript
+import { Mida, } from "@reiryoku/mida";
+import { CTraderPlugin, } from "@reiryoku/mida-ctrader";
+
+Mida.use(new CTraderPlugin());
+```
+
 ## Login example
 How to login into a cTrader account.
 

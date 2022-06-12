@@ -39,11 +39,11 @@ module.exports = {
             {
                 text: "Ecosystem",
                 link: "/ecosystem/",
-            },
+            },/*
             {
                 text: "Sponsors",
                 link: "/sponsors/"
-            },
+            },*/
         ],
         sidebar: {
             "/documentation/playground/": [
