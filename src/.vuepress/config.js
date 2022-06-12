@@ -42,11 +42,7 @@ module.exports = {
             },
             {
                 text: "Sponsors",
-                link: ""
-            },
-            {
-                text: "Repository",
-                link: "https://github.com/Reiryoku-Technologies/Mida"
+                link: "/sponsors/"
             },
         ],
         sidebar: {

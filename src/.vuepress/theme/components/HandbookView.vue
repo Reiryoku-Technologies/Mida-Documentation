@@ -12,13 +12,13 @@
                     <span class="section__title">
                         {{ item.title }}
                     </span>
-                    <ul class="primary-list" v-for="item2 in item.children">
+                    <ul class="primary-list" v-for="child in item.children">
                         <li>
-                            <RouterLink :to="item2.regularPath">{{ item2.title }}</RouterLink>
+                            <RouterLink :to="child.regularPath">{{ child.title }}</RouterLink>
                         </li>
                         <ul>
-                            <li v-for="item3 in item2.headers">
-                                <RouterLink :to="item2.regularPath + '#' + item3.slug">{{ item3.title }}</RouterLink>
+                            <li v-for="header in child.headers">
+                                <RouterLink :to="child.regularPath + '#' + header.slug">{{ header.title }}</RouterLink>
                             </li>
                         </ul>
                     </ul>
@@ -42,10 +42,6 @@ export default {
         PrimaryFooter,
     },
     computed: {
-        descriptor () {
-            return this.$page.frontmatter;
-        },
-
         documentationItems () {
             return resolveSidebarItems(
                 this.$page,
