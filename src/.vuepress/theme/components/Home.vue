@@ -54,35 +54,33 @@
         <div class="flex flex--100 flex--y-align-center last-posts">
             <div class="flx flex--50 post-preview">
                 <div class="flex flex--100 flex--x-align-center">
-                    <p class="headline">Get started with Binance</p>
+                    <p class="headline">Handbook</p>
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
                     <p class="description">
-                        Check out the trading systems documentation to create and deploy<br>
-                        your first maintainable and platform-neutral trading system.
+                        Check out the handbook for a quick and full API overview
                     </p>
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
                     <NavLink
                         class="action-button"
-                        :item="{ link: '/posts/how-to-use-binance/', text: 'Mida Binance →' }"
+                        :item="{ link: '/handbook/', text: 'Handbook →' }"
                     />
                 </div>
             </div>
             <div class="flx flex--50 post-preview">
                 <div class="flex flex--100 flex--x-align-center">
-                    <p class="headline">Get started with cTrader</p>
+                    <p class="headline">Ecosystem</p>
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
                     <p class="description">
-                        Check out the trading systems documentation to create and deploy<br>
-                        your first maintainable and platform-neutral trading system.
+                        Check out the ecosystem for creating trading applications
                     </p>
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
                     <NavLink
                         class="action-button"
-                        :item="{ link: '/posts/how-to-use-ctrader/', text: 'Mida cTrader →' }"
+                        :item="{ link: '/ecosystem/', text: 'Ecosystem →' }"
                     />
                 </div>
             </div>

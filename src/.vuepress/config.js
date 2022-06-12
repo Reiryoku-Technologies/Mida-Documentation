@@ -115,6 +115,7 @@ module.exports = {
                         "utilities/events",
                     ],
                 },
+                /*
                 {
                     title: "Advanced",
                     collapsable: false,
@@ -122,6 +123,7 @@ module.exports = {
                         "advanced/compose-periods",
                     ],
                 }
+                */
             ],
         },
         "/posts/": {
