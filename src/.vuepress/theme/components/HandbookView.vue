@@ -1,12 +1,11 @@
 <template>
     <div class="flex flex--100">
         <div class="flex flex--100 flex--x-align-center">
-            <div class="flex flex--60">
-                <h1>Handbook</h1>
-                <hr class="separator"/>
+            <div class="flex flex--100 flex--x-align-center">
+                <div class="flex flex--60 flex--x-align-center">
+                    <h1>Handbook</h1>
+                </div>
             </div>
-        </div>
-        <div class="flex flex--100 flex--x-align-center">
             <div class="sections">
                 <div class="section" v-for="item in documentationItems">
                     <span class="section__title">
@@ -56,7 +55,7 @@ export default {
 
 <style lang="stylus" scoped>
 .sections
-    margin 50px 0 80px 0
+    margin 30px 0 80px 0
 
     columns: 3
 
@@ -121,13 +120,4 @@ export default {
 
     .primary-list:last-child
         margin-bottom 0
-
-.separator
-    width 100%
-    height 1px
-
-    margin 0
-
-    background-color $borderColor
-    border none
 </style>

@@ -52,13 +52,13 @@
             <Content class="theme-default-content custom"/>
         </main>
         <div class="flex flex--100 flex--y-align-center last-posts">
-            <div class="flx flex--50 post-preview">
+            <div class="flx flex--50 post-preview post-preview--compact">
                 <div class="flex flex--100 flex--x-align-center">
                     <p class="headline">Handbook</p>
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
                     <p class="description">
-                        Check out the handbook for a quick and complete API overview.
+                        For a quick and complete API overview.
                     </p>
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
@@ -68,13 +68,13 @@
                     />
                 </div>
             </div>
-            <div class="flx flex--50 post-preview">
+            <div class="flx flex--50 post-preview post-preview--compact">
                 <div class="flex flex--100 flex--x-align-center">
                     <p class="headline">Ecosystem</p>
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
                     <p class="description">
-                        Check out the ecosystem for completing your trading requirements.
+                        For completing your trading requirements.
                     </p>
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
@@ -360,6 +360,9 @@ export default {
 
     .post-preview
         padding: 110px 0
+
+    .post-preview--compact
+            padding 50px 0
 
     .post-preview:first-child
         width calc(50% - 1px)
