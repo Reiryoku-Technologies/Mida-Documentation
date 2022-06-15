@@ -131,6 +131,19 @@ class MidaOrder {
 await myOrder.cancel();
 ```
 
+## getPosition()
+Used to get the position impacted by the order.
+- **Interface**
+```typescript
+class MidaOrder {
+    getPosition (): Promise<MidaPosition | undefined>;
+}
+```
+- **Example**
+```javascript
+const myPosition = await myOrder.getPosition();
+```
+
 ## Rejected orders
 Orders may get rejected for various reasons, for example one or more directives not being valid, the market being closed
 or the trading account not having enough funds.

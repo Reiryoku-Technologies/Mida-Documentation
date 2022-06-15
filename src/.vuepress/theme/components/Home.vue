@@ -54,14 +54,6 @@
         <div class="flex flex--100 flex--y-align-center last-posts">
             <div class="flx flex--50 post-preview post-preview--compact">
                 <div class="flex flex--100 flex--x-align-center">
-                    <p class="headline">Handbook</p>
-                </div>
-                <div class="flex flex--100 flex--x-align-center">
-                    <p class="description">
-                        For a quick and complete API overview.
-                    </p>
-                </div>
-                <div class="flex flex--100 flex--x-align-center">
                     <NavLink
                         class="action-button"
                         :item="{ link: '/handbook/', text: 'Handbook →' }"
@@ -69,14 +61,6 @@
                 </div>
             </div>
             <div class="flx flex--50 post-preview post-preview--compact">
-                <div class="flex flex--100 flex--x-align-center">
-                    <p class="headline">Ecosystem</p>
-                </div>
-                <div class="flex flex--100 flex--x-align-center">
-                    <p class="description">
-                        For completing your trading requirements.
-                    </p>
-                </div>
                 <div class="flex flex--100 flex--x-align-center">
                     <NavLink
                         class="action-button"

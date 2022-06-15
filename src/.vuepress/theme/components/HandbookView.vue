@@ -120,4 +120,12 @@ export default {
 
     .primary-list:last-child
         margin-bottom 0
+
+@media (max-width: 1190px)
+    .sections
+        columns 2
+
+@media (max-width: 846px)
+    .sections
+        columns 1
 </style>
