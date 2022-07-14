@@ -33,3 +33,12 @@ const myAccount = await login("cTrader", {
 });
 ```
 Read [how to use cTrader](/posts/how-to-use-ctrader/) to get the `clientId`, `clientSecret`, `accessToken` and `cTraderBrokerAccountId` credentials.
+
+- **Multiple accounts Example**
+```javascript
+import { login, } from "@reiryoku/mida";
+
+const myAccount1 = await login("cTrader", { ... });
+const myAccount2 = await login("cTrader", { ... });
+const myAccount3 = await login("Binance/Spot", { ... });
+```

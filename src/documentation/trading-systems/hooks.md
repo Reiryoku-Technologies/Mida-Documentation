@@ -1,9 +1,9 @@
-# Lifecycle hooks
+# Hooks
 Trading systems are ruled by a lifecycle which exposes hooks.
 
 <br>
 <p align="center">
-    <img src="/expert-advisor-lifecycle.svg" width="600px">
+    <img src="/trading-system-lifecycle.svg" width="600px">
 </p>
 
 ## configure()
@@ -18,7 +18,7 @@ class MidaTradingSystem {
 ```
 
 ## onStart()
-Called before the trading systems starts being operative.
+Called before the trading system starts being operative.
 
 - **Interface**
 ```typescript
@@ -27,8 +27,20 @@ class MidaTradingSystem {
 }
 ```
 
+## onStop()
+Called before the trading system stops being operative.
+
+- **Interface**
+```typescript
+class MidaTradingSystem {
+    onStop (): Promise<void>;
+}
+```
+
 ## onTick()
 Called when a new market tick is available for a watched symbol.
+The hook is active only for the symbols with `watchTicks` directive
+enabled.
 
 - **Interface**
 ```typescript
@@ -39,6 +51,8 @@ class MidaTradingSystem {
 
 ## onPeriodUpdate()
 Called when the last live candlestick of a watched symbol is updated.
+The hook is active only for the symbols with `watchPeriods` directive
+enabled and for the timeframes specified in the `timeframes` directive.
 
 - **Interface**
 ```typescript
@@ -49,6 +63,8 @@ class MidaTradingSystem {
 
 ## onPeriodClose()
 Called when the candlestick of a watched symbol is closed.
+The hook is active only for the symbols with `watchPeriods` directive
+enabled and for the timeframes specified in the `timeframes` directive.
 
 - **Interface**
 ```typescript
@@ -58,8 +74,10 @@ class MidaTradingSystem {
 ```
 
 ## onBeforePlaceOrder()
-Called before the trading systems places an order. Can be used
-to filter directives and ensure a risk management.
+Called before the trading system places an order. Can be used
+to filter directives and ensure risk management.
+The hook is active only for orders placed through the trading
+system `placeOrder` method.
 
 - **Interface**
 ```typescript
@@ -68,8 +86,22 @@ class MidaTradingSystem {
 }
 ```
 
+## onImpactPosition()
+Called when an order placed by the trading system has
+created/impacted a position. The hook is active only for orders placed through the trading
+system `placeOrder` method.
+
+- **Interface**
+```typescript
+class MidaTradingSystem {
+    onImpactPosition (position: MidaPosition): Promise<void>;
+}
+```
+
 ## onMarketOpen()
 Called when the market of a watched symbol opens.
+The hook is active only for the symbols with `watchTicks` directive
+enabled.
 
 - **Interface**
 ```typescript
@@ -80,6 +112,8 @@ class MidaTradingSystem {
 
 ## onMarketClose()
 Called when the market of a watched symbol closes.
+The hook is active only for the symbols with `watchTicks` directive
+enabled.
 
 - **Interface**
 ```typescript

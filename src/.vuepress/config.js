@@ -72,6 +72,7 @@ module.exports = {
                         "essentials/balance-equity-margin",
                         "essentials/symbols",
                         "essentials/assets",
+                        "essentials/decimals",
                     ],
                 },
                 {
@@ -97,7 +98,7 @@ module.exports = {
                     collapsable: false,
                     children: [
                         "trading-systems/introduction",
-                        "trading-systems/lifecycle-hooks",
+                        "trading-systems/hooks",
                     ],
                 },
                 {

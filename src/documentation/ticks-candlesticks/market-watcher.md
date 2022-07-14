@@ -7,6 +7,12 @@ class MidaMarketWatcher {
     constructor (parameters: MidaMarketWatcherParameters);
 }
 ```
+- **Interface**
+```typescript
+type MidaMarketWatcherParameters = {
+    tradingAccount: MidaTradingAccount;
+};
+```
 
 ## watch()
 Used to watch a symbol according to the specified directives.
@@ -16,6 +22,14 @@ Used to watch a symbol according to the specified directives.
 class MidaMarketWatcher {
     watch (symbol: string, directives: MidaMarketWatcherDirectives): Promise<void>;
 }
+```
+- **Interface**
+```typescript
+export type MidaMarketWatcherDirectives = {
+    watchTicks?: boolean;
+    watchPeriods?: boolean;
+    timeframes?: number[];
+};
 ```
 
 ## Ticks listener
@@ -48,9 +62,13 @@ await marketWatcher.watch("XAUUSD", {
     watchPeriods: true,
     timeframes: [ MidaTimeframe.H1, ],
 });
+marketWatcher.on("period-update", (event) => {
+    const { period, } = event.descriptor;
+    const goldClosePrice = period.close; // Temporary close price
+});
 marketWatcher.on("period-close", (event) => {
     const { period, } = event.descriptor;
-    const goldClosePrice = period.close;
+    const goldClosePrice = period.close; // Final close price
 });
 ```
 

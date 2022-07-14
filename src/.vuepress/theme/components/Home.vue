@@ -51,6 +51,23 @@
             </div>
             <Content class="theme-default-content custom"/>
         </main>
+        <div class="flex flex--100 flex--y-align-center trading-systems-box">
+            <div class="flex flex--100 flex--x-align-center">
+                <p class="headline">Trading Systems</p>
+            </div>
+            <div class="flex flex--100 flex--x-align-center">
+                <p class="description">
+                    Check out the trading systems documentation to create and deploy<br>
+                    your first maintainable, platform-neutral trading system.
+                </p>
+            </div>
+            <div class="flex flex--100 flex--x-align-center">
+                <NavLink
+                    class="action-button"
+                    :item="tradingSystemsLink"
+                />
+            </div>
+        </div>
         <div class="flex flex--100 flex--y-align-center last-posts">
             <div class="flx flex--50 post-preview post-preview--compact">
                 <div class="flex flex--100 flex--x-align-center">
@@ -67,23 +84,6 @@
                         :item="{ link: '/ecosystem/', text: 'Ecosystem →' }"
                     />
                 </div>
-            </div>
-        </div>
-        <div class="flex flex--100 flex--y-align-center trading-systems-box">
-            <div class="flex flex--100 flex--x-align-center">
-                <p class="headline">Trading Systems</p>
-            </div>
-            <div class="flex flex--100 flex--x-align-center">
-                <p class="description">
-                    Check out the trading systems documentation to create and deploy<br>
-                    your first maintainable, platform-neutral trading system.
-                </p>
-            </div>
-            <div class="flex flex--100 flex--x-align-center">
-                <NavLink
-                    class="action-button"
-                    :item="tradingSystemsLink"
-                />
             </div>
         </div>
         <!--

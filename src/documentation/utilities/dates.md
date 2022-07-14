@@ -5,11 +5,10 @@ Dates are represented by the `MidaDate` API.
 Mida dates are immutable and universal time coordinated
 :::
 
-## MidaDate()
 - **Interface**
 ```typescript
 class MidaDate {
-    constructor (descriptor?: number | string);
+    constructor (value?: MidaDateConvertible);
     
     get timestamp (): number;
     get milliseconds (): number;
@@ -27,21 +26,37 @@ class MidaDate {
     differenceInDays (date: MidaDate): number;
 }
 ```
+
+## date()
+- **Interface**
+```typescript
+date (value?: MidaDateConvertible): MidaDate;
+```
 - **Example 1**
 ```javascript
-import { MidaDate, } from "@reiryoku/mida";
+import { date, } from "@reiryoku/mida";
 
-const date = new MidaDate();
+const date = date();
 ```
 - **Example 2**
 ```javascript
-import { MidaDate, } from "@reiryoku/mida";
+import { date, } from "@reiryoku/mida";
 
-const date = new MidaDate(0); // <= Timestamp
+const date = date(0); // <= Timestamp
 ```
 - **Example 3**
 ```javascript
-import { MidaDate, } from "@reiryoku/mida";
+import { date, } from "@reiryoku/mida";
 
-const date = new MidaDate("2022-05-10T22:26:45.530Z"); // <= ISO
+const date = date("0"); // <= Timestamp
 ```
+- **Example 4**
+```javascript
+import { date, } from "@reiryoku/mida";
+
+const date = date("2022-05-10T22:26:45.530Z"); // <= ISO
+```
+
+## add()
+
+## subtract()

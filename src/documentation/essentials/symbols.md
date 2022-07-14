@@ -56,7 +56,7 @@ Used to get the current best bid price for the symbol.
 - **Interface**
 ```typescript
 class MidaSymbol {
-    getBid (): Promise<number>;
+    getBid (): Promise<MidaDecimal>;
 }
 ```
 - **Example**
@@ -71,7 +71,7 @@ Used to get the current best ask price for the symbol.
 - **Interface**
 ```typescript
 class MidaSymbol {
-    getAsk (): Promise<number>;
+    getAsk (): Promise<MidaDecimal>;
 }
 ```
 - **Example**
@@ -86,7 +86,7 @@ Used to get the current average price for the symbol.
 - **Interface**
 ```typescript
 class MidaSymbol {
-    getAverage (): Promise<number>;
+    getAverage (): Promise<MidaDecimal>;
 }
 ```
 - **Example**

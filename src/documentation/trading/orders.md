@@ -43,12 +43,12 @@ const myOrder = await myAccount.placeOrder({
 ```
 - **Example 3**
 ```javascript
-import { MidaOrderDirection, } from "@reiryoku/mida";
+import { MidaOrderDirection, decimal, } from "@reiryoku/mida";
 
 const myOrder = await myAccount.placeOrder({
-    symbol: "EURUSD",
+    symbol: "SATS",
     direction: MidaOrderDirection.BUY,
-    volume: 1,
+    volume: decimal("0.00000000000000001"),
 });
 ```
 
@@ -86,6 +86,27 @@ const myOrder = await myAccount.placeOrder({
 });
 ```
 
+## Time in force
+Time in force can be passed in the directives.
+
+- **Example**
+```javascript
+import {
+    MidaOrderDirection,
+    MidaOrderTimeInForce,
+    date,
+} from "@reiryoku/mida";
+
+const myOrder = await myAccount.placeOrder({
+    symbol: "XAUUSD",
+    direction: MidaOrderDirection.SELL,
+    volume: 1,
+    limit: 2000,
+    timeInForce: MidaOrderTimeInForce.GOOD_TILL_DATE,
+    expirationDate: date().add(1000 * 60 * 5), // Expire in 5 minutes
+});
+```
+
 ## Impact existing positions
 The position id can be passed in the directives to make the order
 affect an existing position.
@@ -114,7 +135,7 @@ with multiple trades, the execution price is equal to the VWAP of its trades.
 - **Interface**
 ```typescript
 class MidaOrder {
-    get executionPrice (): number | undefined;
+    get executionPrice (): MidaDecimal | undefined;
 }
 ```
 
@@ -132,7 +153,7 @@ await myOrder.cancel();
 ```
 
 ## getPosition()
-Used to get the position impacted by the order.
+Used to get the position created/impacted by the order.
 - **Interface**
 ```typescript
 class MidaOrder {

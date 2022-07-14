@@ -18,18 +18,6 @@ class MidaTradingAccount {
 ```javascript
 const myOpenPositions = await myAccount.getOpenPositions();
 ```
-- **Example 2**
-```javascript
-import { MidaOrderDirection, } from "@reiryoku/mida";
-
-const myOrder = await myAccount.placeOrder({
-    symbol: "XAUUSD",
-    direction: MidaOrderDirection.BUY,
-    volume: 1,
-});
-const myPosition = (await myAccount.getOpenPositions())
-    .find((position) => myOrder.positionId === position.id);
-```
 
 ## getUsedMargin()
 Used to get the position used margin.
@@ -37,7 +25,7 @@ Used to get the position used margin.
 - **Interface**
 ```typescript
 class MidaPosition {
-    getUsedMargin (): Promise<number>;
+    getUsedMargin (): Promise<MidaDecimal>;
 }
 ```
 - **Example**
@@ -51,7 +39,7 @@ Used to get the position unrealized gross profit.
 - **Interface**
 ```typescript
 class MidaPosition {
-    getUnrealizedGrossProfit (): Promise<number>;
+    getUnrealizedGrossProfit (): Promise<MidaDecimal>;
 }
 ```
 - **Example**
@@ -65,7 +53,7 @@ Used to get the position unrealized commission.
 - **Interface**
 ```typescript
 class MidaPosition {
-    getUnrealizedCommission (): Promise<number>;
+    getUnrealizedCommission (): Promise<MidaDecimal>;
 }
 ```
 - **Example**
@@ -79,7 +67,7 @@ Used to get the position unrealized swap.
 - **Interface**
 ```typescript
 class MidaPosition {
-    getUnrealizedSwap (): Promise<number>;
+    getUnrealizedSwap (): Promise<MidaDecimal>;
 }
 ```
 - **Example**
@@ -93,7 +81,7 @@ Used to place an order for adding volume to the position.
 - **Interface**
 ```typescript
 class MidaPosition {
-    addVolume (volume: number): Promise<MidaOrder>;
+    addVolume (volume: MidaDecimalConvertible): Promise<MidaOrder>;
 }
 ```
 - **Example**
@@ -107,7 +95,7 @@ Used to place an order for subtracting volume to the position.
 - **Interface**
 ```typescript
 class MidaPosition {
-    subtractVolume (volume: number): Promise<MidaOrder>;
+    subtractVolume (volume: MidaDecimalConvertible): Promise<MidaOrder>;
 }
 ```
 - **Example**
@@ -144,7 +132,7 @@ be calculated with its closing trades.
 
 - **Example**
 ```javascript
-import { MidaTradePurpose, } from "@reiryoku/mida";
+import { MidaTradePurpose, decimal, } from "@reiryoku/mida";
 
 const positionId = myPosition.id;
 const trades = await myAccount.getTrades(myPosition.symbol);
@@ -152,19 +140,19 @@ const positionClosingTrades = trades.filter((trade) => {
     return trade.positionId === positionId && trade.purpose === MidaTradePurpose.CLOSE;
 });
 
-let totalGrossProfit = 0;
-let totalCommission = 0;
-let totalSwap = 0;
+let totalGrossProfit = decimal(0);
+let totalCommission = decimal(0);
+let totalSwap = decimal(0);
 
 for (const trade of positionClosingTrades) {
-    totalGrossProfit += trade.grossProfit;
-    totalCommission += trade.commission;
-    totalSwap += trade.swap;
+    totalGrossProfit = totalGrossProfit.add(trade.grossProfit);
+    totalCommission = totalCommission.add(trade.commission);
+    totalSwap = totalSwap.add(trade.swap);
 }
 
-// If gross profit, commission and swap are applied on th same asset
+// If gross profit, commission and swap are applied on the same asset
 // then the net profit can be directly calculated
-const netProfit = totalGrossProfit + totalCommission + totalSwap;
+const netProfit = totalGrossProfit.add(totalCommission).add(totalSwap);
 ```
 
 ## changeProtection()
@@ -179,7 +167,7 @@ protection active and not change anything
 - **Interface**
 ```typescript
 class MidaPosition {
-    changeProtection (protection: MidaProtection): Promise<MidaProtectionChange>;
+    changeProtection (protection: MidaProtectionDirectives): Promise<MidaProtectionChange>;
 }
 ```
 - **Example 1**
@@ -203,7 +191,7 @@ Used to set the position take profit.
 - **Interface**
 ```typescript
 class MidaPosition {
-    setTakeProfit (takeProfit: number | undefined): Promise<MidaProtectionChange>;
+    setTakeProfit (takeProfit: MidaDecimalConvertible | undefined): Promise<MidaProtectionChange>;
 }
 ```
 - **Example 1**
@@ -221,7 +209,7 @@ Used to set the position stop loss.
 - **Interface**
 ```typescript
 class MidaPosition {
-    setStopLoss (stopLoss: number | undefined): Promise<MidaProtectionChange>;
+    setStopLoss (stopLoss: MidaDecimalConvertible | undefined): Promise<MidaProtectionChange>;
 }
 ```
 - **Example 1**

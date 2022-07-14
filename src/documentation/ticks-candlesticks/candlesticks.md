@@ -13,14 +13,15 @@ class MidaPeriod {
     get symbol (): string;
     get startDate (): MidaDate;
     get timeframe (): number;
-    get open (): number;
-    get high (): number;
-    get low (): number;
-    get close (): number;
-    get volume (): number;
-    get body (): number;
-    get momentum (): number;
-    get ohlc (): number[];
+    get isClosed (): boolean;
+    get open (): MidaDecimal;
+    get high (): MidaDecimal;
+    get low (): MidaDecimal;
+    get close (): MidaDecimal;
+    get volume (): MidaDecimal;
+    get body (): MidaDecimal;
+    get momentum (): MidaDecimal;
+    get ohlc (): MidaDecimal[];
     get isBullish (): boolean;
     get isNeutral (): boolean;
     get isBearish (): boolean;
@@ -29,7 +30,7 @@ class MidaPeriod {
 ```
 
 ## getSymbolPeriods()
-Used to get the most recent candlesticks of a symbol.
+Used to get the most recent closed candlesticks of a symbol.
 
 ::: warning
 - Candlesticks are ordered from oldest to newest
@@ -51,7 +52,7 @@ const m5Candlesticks = await myAccount.getSymbolPeriods("BTCUSDT", MidaTimeframe
 ```javascript
 const { MidaTimeframe, } = require("@reiryoku/mida");
 
-const h1Candlesticks = await myAccount.getSymbolPeriods("BTCUSDT", MidaTimeframe.H1);
+const h1Candlesticks = await myAccount.getSymbolPeriods("EURUSD", MidaTimeframe.H1);
 ```
 
 ## OHLC
@@ -60,14 +61,14 @@ The period OHLC (open, high, low, close).
 - **Interface**
 ```typescript
 class MidaPeriod {
-    get ohlc (): number[];
+    get ohlc (): MidaDecimal[];
 }
 ```
 - **Example**
 ```javascript
 const { MidaTimeframe, } = require("@reiryoku/mida");
 
-const h1Candlesticks = await myAccount.getSymbolPeriods("TRXUSDT", MidaTimeframe.H1);
+const h1Candlesticks = await myAccount.getSymbolPeriods("#RACE", MidaTimeframe.H1);
 const lastCandlestick = h1Candlesticks[h1Candlesticks.length - 1];
 const [ open, high, low, close, ] = lastCandlestick.ohlc;
 ```

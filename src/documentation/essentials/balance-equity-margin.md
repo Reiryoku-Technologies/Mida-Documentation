@@ -2,7 +2,7 @@
 Balance, equity and margin can be retrieved from trading accounts.
 
 ## Primary asset
-The primary asset of a trading account is decided by the trading platform,
+The primary asset of a trading account is established by the trading platform,
 for forex brokers usually it is a currency like `USD`, `EUR` or `GBP`,
 for crypto exchanges usually it is `BTC` or `USDT`.
 
@@ -19,7 +19,7 @@ Used to get the account primary asset balance.
 - **Interface**
 ```typescript
 class MidaTradingAccount {
-    getBalance (): Promise<number>;
+    getBalance (): Promise<MidaDecimal>;
 }
 ```
 - **Example**
@@ -47,7 +47,7 @@ Used to get the account primary asset balance if all the owned assets were liqui
 - **Interface**
 ```typescript
 class MidaTradingAccount {
-    getEquity (): Promise<number>;
+    getEquity (): Promise<MidaDecimal>;
 }
 ```
 - **Example**
@@ -61,7 +61,7 @@ Used to get the account used margin.
 - **Interface**
 ```typescript
 class MidaTradingAccount {
-    getUsedMargin (): Promise<number>;
+    getUsedMargin (): Promise<MidaDecimal>;
 }
 ```
 - **Example**
@@ -75,7 +75,7 @@ Used to get account the free margin.
 - **Interface**
 ```typescript
 class MidaTradingAccount {
-    getFreeMargin (): Promise<number>;
+    getFreeMargin (): Promise<MidaDecimal>;
 }
 ```
 - **Example**
@@ -84,12 +84,12 @@ const freeMargin = await myAccount.getFreeMargin();
 ```
 
 ## getMarginLevel()
-Used to get the account margin level, returns `NaN` if no margin is used.
+Used to get the account margin level, returns `undefined` if no margin is used.
 
 - **Interface**
 ```typescript
 class MidaTradingAccount {
-    getMarginLevel (): Promise<number>;
+    getMarginLevel (): Promise<MidaDecimal | undefined>;
 }
 ```
 - **Example**

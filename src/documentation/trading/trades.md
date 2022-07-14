@@ -11,17 +11,17 @@ or partially with one or more trades
 ```typescript
 class MidaTrade {
     get symbol: string;
-    get volume: number;
-    get executionPrice: number;
+    get volume: MidaDecimal;
+    get executionPrice: MidaDecimal;
     get executionDate: MidaDate;
     get rejectionDate: MidaDate;
     get orderId: string;
     get positionId: string;
-    get grossProfit: number;
+    get grossProfit: MidaDecimal;
     get grossProfitAsset: string;
-    get commission: number;
+    get commission: MidaDecimal;
     get commissionAsset: string;
-    get swap: number;
+    get swap: MidaDecimal;
     get swapAsset: string;
     get status: MidaTradeStatus;
     get purpose: MidaTradePurpose;

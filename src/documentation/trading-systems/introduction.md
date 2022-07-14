@@ -27,7 +27,9 @@ A trading system can be configured to listen market ticks and candlesticks, this
 used to implement a strategy according to market conditions.
 
 ::: tip
-Every trading system has an integrated market watcher
+Every trading system has an integrated market watcher, the `watched()` method
+can be used to set the market watcher directives during the trading system
+first startup
 :::
 
 - **Example 2**
@@ -35,12 +37,18 @@ Every trading system has an integrated market watcher
 import { MidaTradingSystem, MidaTimeframe, } from "@reiryoku/mida";
 
 export class MyTradingSystem extends MidaTradingSystem {
+    watched () {
+        return {
+            "BTCUSD": {
+                watchTicks: true,
+                watchPeriods: true,
+                timeframes: [ MidaTimeframe.H1, MidaTimeframe.D1, ],
+            },
+        };
+    }
+    
     async configure () {
-        await this.watchTicks("BTCUSDT");
-        await this.watchPeriods("BTCUSDT", [
-            MidaTimeframe.H1,
-            MidaTimeframe.D1,
-        ]);
+        // ...
     }
     
     async onTick (tick) {
@@ -67,7 +75,7 @@ export class MyTradingSystem extends MidaTradingSystem {
 ```
 
 ## watchTicks()
-Used to listen ticks which will trigger the `onTick()` hook.
+Used to watch the ticks of the specified symbol, triggering the respective hooks.
 
 - **Interface**
 ```typescript
@@ -77,7 +85,7 @@ class MidaTradingSystem {
 ```
 
 ## watchPeriods()
-Used to listen closed candlesticks which will trigger the `onPeriodClose()` hook.
+Used to watch the periods of the specified symbol and timeframe/s, triggering the respective hooks.
 
 - **Interface**
 ```typescript
