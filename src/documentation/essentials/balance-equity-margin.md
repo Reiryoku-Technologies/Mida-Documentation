@@ -2,9 +2,9 @@
 Balance, equity and margin can be retrieved from trading accounts.
 
 ## Primary asset
-The primary asset of a trading account is established by the trading platform,
+The primary asset of a trading account depends on the trading platform,
 for forex brokers usually it is a currency like `USD`, `EUR` or `GBP`,
-for crypto exchanges usually it is `BTC` or `USDT`.
+for crypto exchanges usually it is `BTC`, `ETH` or `USDT`.
 
 - **Interface**
 ````typescript

@@ -77,7 +77,7 @@ myAccount.on("trade", (event) => {
 });
 ```
 - **Example 2**
-```typescript
+```typescript{5-9}
 const myOrder = await myAccount.placeOrder({
     symbol: "BTCUSDT",
     direction: MidaOrderDirection.BUY,

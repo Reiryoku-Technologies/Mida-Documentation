@@ -90,7 +90,7 @@ const myOrder = await myAccount.placeOrder({
 Time in force can be passed in the directives.
 
 - **Example**
-```javascript
+```javascript{12,13}
 import {
     MidaOrderDirection,
     MidaOrderTimeInForce,
@@ -103,7 +103,7 @@ const myOrder = await myAccount.placeOrder({
     volume: 1,
     limit: 2000,
     timeInForce: MidaOrderTimeInForce.GOOD_TILL_DATE,
-    expirationDate: date().add(1000 * 60 * 5), // Expire in 5 minutes
+    expirationDate: date().addMinutes(5), // Expire in 5 minutes
 });
 ```
 
@@ -112,7 +112,7 @@ The position id can be passed in the directives to make the order
 affect an existing position.
 
 - **Example**
-```javascript
+```javascript{4}
 import { MidaOrderDirection, } from "@reiryoku/mida";
 
 const myOrder = await myAccount.placeOrder({
@@ -204,7 +204,7 @@ if (myOrder.isRejected) {
 Take profit and stop loss can be optionally set with the `protection` directive.
 
 - **Example**
-```javascript
+```javascript{7-10}
 import { MidaOrderDirection, } from "@reiryoku/mida";
 
 const myOrder = await myAccount.placeOrder({
