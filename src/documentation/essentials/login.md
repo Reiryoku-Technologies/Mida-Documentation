@@ -15,8 +15,8 @@ Used to login into a trading account.
 import { login, } from "@reiryoku/mida";
 
 const myAccount = await login("Binance/Spot", {
-    apiKey: "...",
-    apiSecret: "...",
+    apiKey: "***",
+    apiSecret: "***",
 });
 ```
 Read [how to use Binance](/posts/how-to-use-binance/) to get the `apiKey` and `apiSecret` credentials.
@@ -26,10 +26,10 @@ Read [how to use Binance](/posts/how-to-use-binance/) to get the `apiKey` and `a
 import { login, } from "@reiryoku/mida";
 
 const myAccount = await login("cTrader", {
-    clientId: "...",
-    clientSecret: "...",
-    accessToken: "...",
-    cTraderBrokerAccountId: "...",
+    clientId: "***",
+    clientSecret: "***",
+    accessToken: "***",
+    cTraderBrokerAccountId: "***",
 });
 ```
 Read [how to use cTrader](/posts/how-to-use-ctrader/) to get the `clientId`, `clientSecret`, `accessToken` and `cTraderBrokerAccountId` credentials.

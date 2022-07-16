@@ -39,35 +39,57 @@
             </div>
         </div>
         <main class="flex flex--100 home">
-            <div v-if="descriptor.features && descriptor.features.length" class="flex flex--100 flex--x-align-between features">
-                <div
-                    v-for="(feature, index) in descriptor.features"
-                    :key="index"
-                    class="feature"
-                >
-                    <h2>{{ feature.title }}</h2>
-                    <p>{{ feature.details }}</p>
+            <div class="flex flex--100 flex--x-align-between flex--y-align-center features">
+                <div class="feature">
+                    <h2 class="feature-title">Platform-neutral</h2>
+                    <p class="feature-description">
+                        A single TypeScript API for trading crypto, stocks, forex, commodities and more on any trading platform.
+                    </p>
+                </div>
+                <Content slot-key="platform-neutral"/>
+            </div>
+            <div class="flex flex--100 flex--x-align-between flex--y-align-center features">
+                <Content slot-key="approachable"/>
+                <div class="feature">
+                    <h2 class="feature-title">Approachable</h2>
+                    <p class="feature-description">
+                        A clean, simple and intuitive TypeScript API with first-class documentation.
+                    </p>
                 </div>
             </div>
-            <Content class="theme-default-content custom"/>
+            <div class="flex flex--100 flex--x-align-between flex--y-align-center features">
+                <div class="feature">
+                    <h2 class="feature-title">Versatile</h2>
+                    <p class="feature-description">
+                        A complete and incrementally adoptable ecosystem that scales between a library and a full-featured framework.
+                    </p>
+                </div>
+                <Content slot-key="versatile"/>
+            </div>
+            <!-- <Content class="theme-default-content custom"/> -->
         </main>
-        <div class="flex flex--100 flex--y-align-center trading-systems-box">
-            <div class="flex flex--100 flex--x-align-center">
-                <p class="headline">Trading Systems</p>
-            </div>
-            <div class="flex flex--100 flex--x-align-center">
-                <p class="description">
-                    Check out the trading systems documentation to create and deploy<br>
-                    your first maintainable, platform-neutral trading system.
-                </p>
-            </div>
-            <div class="flex flex--100 flex--x-align-center">
-                <NavLink
-                    class="action-button"
-                    :item="tradingSystemsLink"
-                />
+        <!--
+        <div class="flex flex--100 flex--x-align-center">
+            <div class="flex flex--y-align-center trading-systems-box">
+                <div class="flex flex--100 flex--x-align-center">
+                    <p class="headline">Trading Systems</p>
+                </div>
+                <div class="flex flex--100 flex--x-align-center">
+                    <p class="description">
+                        Check out the trading systems documentation to create<br>
+                        and deploy a modular, platform-neutral trading system.
+                    </p>
+                </div>
+                <div class="flex flex--100 flex--x-align-center">
+                    <NavLink
+                        class="action-button"
+                        :item="tradingSystemsLink"
+                    />
+                </div>
             </div>
         </div>
+        -->
+        <!--
         <div class="flex flex--100 flex--y-align-center last-posts">
             <div class="flx flex--50 post-preview post-preview--compact">
                 <div class="flex flex--100 flex--x-align-center">
@@ -86,6 +108,7 @@
                 </div>
             </div>
         </div>
+        -->
         <!--
         <div class="flex flex--100 flex--y-align-center business-box">
             <div class="flex flex--100 flex--x-align-center">
@@ -234,13 +257,17 @@ export default {
         max-width 960px
         margin 100px 0
 
+    .features + .features
+        padding-top 100px
+        margin-top 0
+
     .feature
         position relative
         box-sizing border-box
         flex 0 32%
         padding 28px 36px
 
-    h2
+    .feature-title
         font-size 20px
         font-weight bold
         color rgba(255, 255, 255, 0.87)
@@ -248,7 +275,8 @@ export default {
         border-bottom none
         padding-bottom 0
         font-style italic
-    p
+
+    .feature-description
         font-size 15px
         font-weight 400
         letter-spacing 0.2px
@@ -321,8 +349,8 @@ export default {
         margin: 20px 30px 0 20px !important
 
 .trading-systems-box
-    width 100%
     overflow hidden
+    width 60%
     height 430px
     position relative
 
@@ -394,11 +422,6 @@ export default {
 
     animation: test4 8s linear infinite;
 
-
-
-
-
-
 @keyframes test
     0%
         transform rotateY(45deg) translateY(0)
@@ -423,4 +446,5 @@ export default {
         transform rotateY(135deg) translateY(-500px)
     100%
         transform rotateY(135deg) translateY(0)
+
 </style>

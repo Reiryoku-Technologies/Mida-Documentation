@@ -12,19 +12,22 @@ import SidebarLinks from '@theme/components/SidebarLinks.vue';
 import NavLinks from '@theme/components/NavLinks.vue';
 
 export default {
-  name: 'Sidebar',
-
-  components: { SidebarLinks, NavLinks },
-
-  props: ['items']
-}
+    name: "Sidebar",
+    components: {
+        SidebarLinks,
+        NavLinks,
+    },
+    props: [
+        "items",
+    ],
+};
 </script>
 
 <style lang="stylus">
 .sidebar
-  user-select none;
-  -webkit-user-select none;
-  background-color $backgroundColor
+  user-select none
+  -webkit-user-select none
+  background-color rgb(24, 24, 24)
   ul
     padding 0
     margin 0

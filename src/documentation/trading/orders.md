@@ -58,7 +58,7 @@ Buy limit orders are executed when the ask price goes below the limit price,
 sell limit orders are executed when the bid price goes above the limit price.
 
 - **Example**
-```javascript
+```javascript{7}
 import { MidaOrderDirection, } from "@reiryoku/mida";
 
 const myOrder = await myAccount.placeOrder({
@@ -75,7 +75,7 @@ Buy stop orders are executed when the ask price goes above the stop price,
 sell stop orders are executed when the bid price goes below the stop price.
 
 - **Example**
-```javascript
+```javascript{7}
 import { MidaOrderDirection, } from "@reiryoku/mida";
 
 const myOrder = await myAccount.placeOrder({

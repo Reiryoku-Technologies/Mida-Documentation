@@ -3,6 +3,7 @@ module.exports = {
     head: [
         [ "meta", { name: "apple-mobile-web-app-capable", content: "yes" }, ],
         [ "meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }, ],
+        [ "meta", { name: "theme-color", content: "#1A1A1A" }, ],
         [ "meta", { property: "og:image", content: "https://www.mida.org/mida-background.png" }, ],
         [ "link", { rel: "icon", type: "image/png", sizes: "16x16", href: "favicon-16x16.png" }, ],
         [ "link", { rel: "icon", type: "image/png", sizes: "32x32", href: "favicon-32x32.png" }, ],
@@ -27,15 +28,10 @@ module.exports = {
                 text: "Handbook",
                 link: "/handbook/",
             },
-            /*
             {
-                text: "Guides",
-                link: "",
-                items: [
-                    { text: "How to use Binance", link: "", },
-                    { text: "How to use cTrader", link: "", },
-                ],
-            },*/
+                text: "Trading Systems",
+                link: "/documentation/trading-systems/introduction.html",
+            },
             {
                 text: "Ecosystem",
                 link: "/ecosystem/",

@@ -1,3 +1,4 @@
 ---
 handbook: true
+title: Handbook
 ---

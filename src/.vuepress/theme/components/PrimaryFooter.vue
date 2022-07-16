@@ -2,9 +2,7 @@
     <div class="flex flex--100 flex--x-align-center footer">
         <div class="flex flex--70 flex--x-align-center">
             <p class="paragraph">
-                Made with ❤️ by Reiryoku Technologies
-                <br>
-                Copyright © 2020-{{ currentYear }}
+                Copyright © 2020-{{ currentYear }} Reiryoku Technologies
             </p>
         </div>
     </div>

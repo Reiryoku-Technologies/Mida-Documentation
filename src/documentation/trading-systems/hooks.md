@@ -77,7 +77,7 @@ class MidaTradingSystem {
 Called before the trading system places an order. Can be used
 to filter directives and ensure risk management.
 The hook is active only for orders placed through the trading
-system `placeOrder` method.
+system `placeOrder()` method.
 
 - **Interface**
 ```typescript
@@ -89,7 +89,7 @@ class MidaTradingSystem {
 ## onImpactPosition()
 Called when an order placed by the trading system has
 created/impacted a position. The hook is active only for orders placed through the trading
-system `placeOrder` method.
+system `placeOrder()` method.
 
 - **Interface**
 ```typescript

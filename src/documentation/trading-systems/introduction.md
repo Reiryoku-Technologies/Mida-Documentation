@@ -28,8 +28,7 @@ used to implement a strategy according to market conditions.
 
 ::: tip
 Every trading system has an integrated market watcher, the `watched()` method
-can be used to set the market watcher directives during the trading system
-first startup
+is used to configure the market watcher before the first startup of the trading system
 :::
 
 - **Example 2**
