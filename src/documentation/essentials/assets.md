@@ -75,7 +75,11 @@ class MidaTradingAccount {
     getCryptoAssetDepositAddress (asset: string, net: string): Promise<string>;
 }
 ```
-- **Example**
+- **Example 1**
 ```js
 const trxAddress = await myAccount.getCryptoAssetDepositAddress("TRX", "BNB");
+```
+- **Example 2**
+```js
+const btcAddress = await myAccount.getCryptoAssetDepositAddress("BTC", "");
 ```

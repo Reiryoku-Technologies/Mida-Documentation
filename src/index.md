@@ -41,7 +41,7 @@ export class MyTradingSystem extends MidaTradingSystem {
     }
 
     async onStart () {
-        // ...
+        // Called when the trading system starts being operative
     }
 
     async onTick (tick) {
@@ -49,7 +49,7 @@ export class MyTradingSystem extends MidaTradingSystem {
     }
 
     async onStop () {
-        // ...
+        // Called when the trading system stops being operative
     }
 }
 ```

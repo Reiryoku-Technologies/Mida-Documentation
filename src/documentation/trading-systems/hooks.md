@@ -40,7 +40,9 @@ class MidaTradingSystem {
 ## onTick()
 Called when a new market tick is available for a watched symbol.
 The hook is active only for the symbols with `watchTicks` directive
-enabled.
+enabled. This hook is queued, this means that there can be only
+one hook call at time and the next hook call will wait for the current
+one to resolve.
 
 - **Interface**
 ```typescript
@@ -53,6 +55,9 @@ class MidaTradingSystem {
 Called when the last live candlestick of a watched symbol is updated.
 The hook is active only for the symbols with `watchPeriods` directive
 enabled and for the timeframes specified in the `timeframes` directive.
+This hook is queued, this means that there can be only
+one hook call at time and the next hook call will wait for the current
+one to resolve.
 
 - **Interface**
 ```typescript
@@ -77,12 +82,13 @@ class MidaTradingSystem {
 Called before the trading system places an order. Can be used
 to filter directives and ensure risk management.
 The hook is active only for orders placed through the trading
-system `placeOrder()` method.
+system `placeOrder()` method. The hook can return `undefined` to
+avoid sending the order to the trading platform (to cancel the order request).
 
 - **Interface**
 ```typescript
 class MidaTradingSystem {
-    onBeforePlaceOrder (directives: MidaOrderDirectives): Promise<MidaOrderDirectives>;
+    onBeforePlaceOrder (directives: MidaOrderDirectives): Promise<MidaOrderDirectives | undefined>;
 }
 ```
 

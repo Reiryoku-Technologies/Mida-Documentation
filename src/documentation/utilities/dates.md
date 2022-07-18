@@ -21,7 +21,11 @@ class MidaDate {
     get iso (): string;
 
     add (milliseconds: number): MidaDate;
+    addMinutes (minutes: number): MidaDate;
+    addHours (hours: number): MidaDate;
     subtract (milliseconds: number): MidaDate;
+    subtractMinutes (minutes: number): MidaDate;
+    subtractHours (hours: number): MidaDate;
     differenceInMinutes (date: MidaDate): number;
     differenceInDays (date: MidaDate): number;
 }
@@ -59,4 +63,12 @@ const date = date("2022-05-10T22:26:45.530Z"); // <= ISO
 
 ## add()
 
+## addMinutes()
+
+## addHours()
+
 ## subtract()
+
+## subtractMinutes()
+
+## subtractHours()

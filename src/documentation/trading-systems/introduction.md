@@ -10,7 +10,8 @@ import { MidaTradingSystem, } from "@reiryoku/mida";
 
 export class MyTradingSystem extends MidaTradingSystem {
     async configure () {
-        // Called once per instance, use as async constructor
+        // Called once per instance before the first startup
+        // can be used as async constructor
     }
     
     async onStart () {
@@ -27,7 +28,7 @@ A trading system can be configured to listen market ticks and candlesticks, this
 used to implement a strategy according to market conditions.
 
 ::: tip
-Every trading system has an integrated market watcher, the `watched()` method
+A trading system has an integrated market watcher, the `watched()` method
 is used to configure the market watcher before the first startup of the trading system
 :::
 
@@ -47,7 +48,8 @@ export class MyTradingSystem extends MidaTradingSystem {
     }
     
     async configure () {
-        // ...
+        // Called once per instance before the first startup
+        // can be used as async constructor
     }
     
     async onTick (tick) {
@@ -73,23 +75,43 @@ export class MyTradingSystem extends MidaTradingSystem {
 }
 ```
 
-## watchTicks()
-Used to watch the ticks of the specified symbol, triggering the respective hooks.
+## start()
+Starts the trading system.
 
 - **Interface**
 ```typescript
 class MidaTradingSystem {
-    watchTicks (symbol: string): Promise<void>;
+    start (): Promise<void>;
+}
+```
+
+## stop()
+Stops the trading system.
+
+- **Interface**
+```typescript
+class MidaTradingSystem {
+    stop (): Promise<void>;
+}
+```
+
+## watchTicks()
+Used to watch the ticks of the specified symbol.
+
+- **Interface**
+```typescript
+class MidaTradingSystem {
+    protected watchTicks (symbol: string): Promise<void>;
 }
 ```
 
 ## watchPeriods()
-Used to watch the periods of the specified symbol and timeframe/s, triggering the respective hooks.
+Used to watch the periods of the specified symbol and timeframe/s.
 
 - **Interface**
 ```typescript
 class MidaTradingSystem {
-    watchPeriods (symbol: string, timeframes: number[] | number): Promise<void>;
+    protected watchPeriods (symbol: string, timeframes: number[] | number): Promise<void>;
 }
 ```
 
@@ -100,6 +122,6 @@ order will be associated to the trading system.
 - **Interface**
 ```typescript
 class MidaTradingSystem {
-    placeOrder (directives: MidaOrderDirectives): Promise<MidaOrder>;
+    protected placeOrder (directives: MidaOrderDirectives): Promise<MidaOrder | undefined>;
 }
 ```

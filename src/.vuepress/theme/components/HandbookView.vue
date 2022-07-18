@@ -3,7 +3,7 @@
         <div class="flex flex--100 flex--x-align-center">
             <div class="flex flex--100 flex--x-align-center">
                 <div class="flex flex--60 flex--x-align-center">
-                    <h1>Handbook</h1>
+                    <h1 id="handbook"><a href="#handbook" class="header-anchor">#</a> Handbook</h1>
                 </div>
             </div>
             <div class="sections">
