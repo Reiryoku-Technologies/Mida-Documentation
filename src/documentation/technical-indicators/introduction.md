@@ -23,9 +23,7 @@ Used to create a new indicator.
 
 - **Interface**
 ```typescript
-class Mida {
-    static createIndicator (name: string, parameters?: GenericObject): MidaIndicator;
-}
+createIndicator (name: string, parameters?: GenericObject): MidaIndicator;
 ```
 - **Example**
 ```javascript
@@ -67,7 +65,7 @@ class MidaIndicator {
 ```javascript
 import { createIndicator, } from "@reiryoku/mida";
 
-const sma = createIndicator("SMA");
+const sma = createIndicator("SMA", { length: 14, });
 
 await sma.next([ 1, 2, 3, ]); // Calculate on 1, 2, 3
 await sma.next([ 4, 5, 6, ]); // Calculate on 1, 2, 3, 4, 5, 6

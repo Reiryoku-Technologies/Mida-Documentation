@@ -12,9 +12,9 @@ or partially with one or more trades
 class MidaTrade {
     get symbol: string;
     get volume: MidaDecimal;
-    get executionPrice: MidaDecimal;
-    get executionDate: MidaDate;
-    get rejectionDate: MidaDate;
+    get executionPrice: MidaDecimal | undefined;
+    get executionDate: MidaDate | undefined;
+    get rejectionDate: MidaDate | undefined;
     get orderId: string;
     get positionId: string;
     get grossProfit: MidaDecimal;

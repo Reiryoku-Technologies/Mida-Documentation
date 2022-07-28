@@ -46,10 +46,10 @@
                         A single TypeScript API for trading crypto, stocks, forex, commodities and more on any trading platform.
                     </p>
                 </div>
-                <Content slot-key="platform-neutral"/>
+                <Content slot-key="platform-neutral" class="code-sample"/>
             </div>
             <div class="flex flex--100 flex--x-align-between flex--y-align-center features">
-                <Content slot-key="approachable"/>
+                <Content slot-key="approachable" class="code-sample"/>
                 <div class="feature">
                     <h2 class="feature-title">Approachable</h2>
                     <p class="feature-description">
@@ -61,10 +61,10 @@
                 <div class="feature">
                     <h2 class="feature-title">Versatile</h2>
                     <p class="feature-description">
-                        A complete and incrementally adoptable ecosystem that scales between a library and a full-featured framework.
+                        A complete and incrementally adoptable ecosystem that scales between a library and a full-featured engine.
                     </p>
                 </div>
-                <Content slot-key="versatile"/>
+                <Content slot-key="versatile" class="code-sample"/>
             </div>
             <!-- <Content class="theme-default-content custom"/> -->
         </main>
@@ -221,7 +221,6 @@ export default {
     text-align center
     color rgba(235, 235, 235, 0.6)
 
-
 .action-button
     padding 10px 24px
     background-image linear-gradient(45deg, $linkColor, darken($linkColor, 20%))
@@ -249,12 +248,11 @@ export default {
     background-color transparent
 
 .home
-    max-width $homePageWidth
+    max-width 1060px
     margin 0 auto
     display block
 
     .features
-        max-width 960px
         margin 100px 0
 
     .features + .features
@@ -327,13 +325,28 @@ export default {
     border-bottom 1px solid $borderColor
 
 
+.code-sample
+    padding 28px 36px
+
 @media (max-width: 1000px)
+    .home
+        max-width initial
+
+        .features
+            max-width initial
+
     .stream
         height 620px
 
     .stream__text
         display none
 
+    .code-sample
+        width 100%
+        padding 0
+
+        ::v-deep div[class*="language-"]
+            border-radius 0
 
 .business-box
     width 100%

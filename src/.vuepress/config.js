@@ -25,12 +25,8 @@ module.exports = {
                 link: "/documentation/",
             },
             {
-                text: "Handbook",
-                link: "/handbook/",
-            },
-            {
-                text: "Trading Systems",
-                link: "/documentation/trading-systems/introduction.html",
+                text: "API",
+                link: "/api/",
             },
             {
                 text: "Ecosystem",
