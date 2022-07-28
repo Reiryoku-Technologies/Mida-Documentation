@@ -16,14 +16,14 @@
             <div class="flex flex--100 flex--y-align-center stream-box">
                 <div class="flex flex--100 flex--x-align-center">
                     <p class="headline">
-                        The framework for trading<br>
-                        in global financial markets
+                        The open-source and<br>
+                        cross-platform trading engine
                     </p>
                 </div>
                 <div class="flex flex--100 flex--x-align-center">
                     <p class="description">
-                        A full-featured ecosystem for trading financial assets<br>
-                        such as crypto, stocks, forex or commodities.
+                        A full-featured ecosystem for trading financial assets such as crypto, forex,<br>
+                        stocks or commodities in global financial markets.
                     </p>
                 </div>
                 <div class="flex flex--100 flex--x-align-center">

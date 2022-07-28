@@ -1,4 +1,4 @@
 ---
-handbook: true
-title: Handbook
+api: true
+title: API
 ---

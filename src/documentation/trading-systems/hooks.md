@@ -1,11 +1,6 @@
 # Hooks
 Trading systems are ruled by a lifecycle which exposes hooks.
 
-<br>
-<p align="center">
-    <img src="/trading-system-lifecycle.svg" width="600px">
-</p>
-
 ## configure()
 Called once before the first start of the trading system. Can be used
 as asynchronous constructor.
